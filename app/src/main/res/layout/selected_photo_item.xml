@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvInventoryItem"
+    android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:layout_margin="5dp"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="4dp">
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_logo" />
+
+
+    <ImageView
+        android:id="@+id/ivCross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/close_order_icon"
+        android:tint="@color/colorPrimary"
+        android:paddingTop="@dimen/twoDp"
+        android:paddingEnd="@dimen/twoDp"
+        android:paddingRight="@dimen/twoDp"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</androidx.cardview.widget.CardView>

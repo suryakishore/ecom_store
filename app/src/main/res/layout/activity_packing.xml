@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.ecomstore.pack.PackingViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPackingToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/zeroDp"
+            app:cardElevation="@dimen/fiveDp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_toolbar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpZero"
+            app:layout_constraintBottom_toTopOf="@+id/clAddProduct"
+            app:layout_constraintTop_toBottomOf="@+id/cvPackingToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dpZero"
+
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clProductItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/dpTwenty"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivProductImg"
+                        android:layout_width="@dimen/dpSeventy"
+                        android:layout_height="@dimen/dpSeventy"
+                        android:layout_marginStart="@dimen/dpTwenty"
+                        android:src="@drawable/ic_default_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProductName"
+                        style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:layout_marginEnd="@dimen/twentyDp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        app:layout_constraintEnd_toStartOf="@+id/tvProductPrice"
+                        app:layout_constraintHorizontal_weight="6"
+                        app:layout_constraintStart_toEndOf="@+id/ivProductImg"
+                        app:layout_constraintTop_toTopOf="@+id/ivProductImg"
+                        tools:text="Vehicula Lobortis Fringilla-Tellus Tincidunt" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProductPrice"
+                        style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/twentyDp"
+                        android:includeFontPadding="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="$ 100.99" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHistorySizeAndColor"
+                        style="@style/Text.13sp.Grey.MontserratRegular"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tenDp"
+                        app:layout_constraintEnd_toEndOf="@+id/tvProductName"
+                        app:layout_constraintStart_toStartOf="@+id/tvProductName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQty"
+                        tools:text="Size: 500ml" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvQty"
+                        style="@style/Text.13sp.Grey.MontserratRegular"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qty"
+                        app:layout_constraintStart_toStartOf="@+id/tvProductName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotalProductPrice"
+                        style="@style/Text.13sp.BlackShade.MontserratMedium"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fiveDp"
+                        android:layout_marginEnd="@dimen/sevenDp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvQty"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQty"
+                        app:layout_constraintTop_toTopOf="@+id/tvQty"
+                        tools:text=" 03 x $ 12.00 / Pcs" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvItemViewMore"
+                        style="@style/Text.14sp.Primary.MontserratMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fiveDp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/fiveDp"
+                        android:text="@string/orderDetails_viewMore"
+                        app:layout_constraintStart_toStartOf="@+id/tvQty"
+                        app:layout_constraintTop_toBottomOf="@+id/tvHistorySizeAndColor" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSelectBox"
+                    style="@style/Text.20sp.BlackShade.MontserratBold"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twentyDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:text="@string/selectBox"
+                    android:textAllCaps="true"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clProductItem" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBoxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/fifteenDp"
+                    android:clipToPadding="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSelectBox" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/layoutButton"
+                layout="@layout/layout_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/pbPacking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+
+
+    <item
+        android:id="@+id/navHome"
+        android:icon="@drawable/ic_home_icon"
+        android:state_checked="false"
+        android:title="@string/manageOrders" />
+
+    <item
+        android:id="@+id/navOrderHistory"
+        android:icon="@drawable/ic_menu_order_icon"
+        android:state_checked="false"
+        android:title="@string/history" />
+
+    <item
+        android:id="@+id/navNotification"
+        android:icon="@drawable/ic_notification"
+        android:state_checked="false"
+        android:title="@string/notifications" />
+
+    <item
+        android:id="@+id/navNeedHelp"
+        android:icon="@drawable/ic_menu_need_help_icon"
+        android:state_checked="false"
+        android:title="@string/needHelp"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/navBankDetails"
+        android:icon="@drawable/menu_bank"
+        android:title="@string/bankDetails"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/navPayment"
+        android:icon="@drawable/ic_wallet"
+        android:state_checked="true"
+        android:title="@string/wallet" />
+
+
+    <item
+        android:id="@+id/navChangeLang"
+        android:icon="@drawable/profile_language_icon"
+        android:state_checked="false"
+        android:title="@string/changeLang" />
+    <item
+        android:id="@+id/navInventary"
+        android:icon="@drawable/ic_menu_need_help_icon"
+        android:state_checked="false"
+        android:title="@string/addInventary"
+        android:visible="false" />
+
+
+</menu>

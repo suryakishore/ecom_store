@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRating"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpTwoTwentyThree">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvConfirmMessage"
+        android:layout_width="@dimen/dpThreeFifty"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:layout_marginTop="@dimen/dpTwentyFive"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/spTwenty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNo"
+        android:layout_width="@dimen/dpOneFiftySix"
+        android:layout_height="@dimen/dpSixty"
+        android:layout_marginStart="@dimen/dpTwentyFive"
+        android:layout_marginTop="@dimen/dpSixtyTwo"
+        android:layout_marginBottom="@dimen/dpTwentyEight"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_regular"
+        android:background="@drawable/drawable_no_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/no"
+        android:textAllCaps="false"
+        android:textColor="@color/verified"
+        android:textSize="@dimen/spEighteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvConfirmMessage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnYes"
+        android:layout_width="@dimen/dpOneFiftySix"
+        android:layout_height="@dimen/dpSixty"
+        android:layout_marginStart="@dimen/dpFive"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginTop="@dimen/dpSixtyTwo"
+        android:layout_marginEnd="@dimen/dpTwentyTwo"
+        android:layout_marginBottom="@dimen/dpTwentyEight"
+        android:layout_weight="1"
+        android:background="@drawable/drawable_yes_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/yes"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spEighteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnNo"
+        app:layout_constraintTop_toTopOf="@id/tvConfirmMessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

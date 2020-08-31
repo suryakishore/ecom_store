@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llcustomerItem"
+    android:layout_marginTop="@dimen/tenDp"
+    android:layout_marginBottom="@dimen/tenDp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvCustomerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sixteenSp"
+        app:fontFamily="@font/roboto_bold"
+        android:layout_marginLeft="@dimen/fiveDp"
+        android:layout_marginStart="@dimen/fiveDp"
+        />
+    <TextView
+        android:id="@+id/tvMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fiveDp"
+        android:textAllCaps="false"
+        android:textColor="@color/cement"
+        android:textSize="@dimen/twelveSp"
+        app:fontFamily="@font/robotoregular"
+        android:layout_marginLeft="@dimen/fiveDp"
+        android:layout_marginStart="@dimen/fiveDp"
+        />
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twoDp"
+        android:textAllCaps="false"
+        android:textColor="@color/cement"
+        android:textSize="@dimen/twelveSp"
+        app:fontFamily="@font/robotoregular"
+        android:layout_marginLeft="@dimen/fiveDp"
+        android:layout_marginStart="@dimen/fiveDp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/fifteenDp"
+        android:background="@color/lightWhite"
+        />
+</LinearLayout>

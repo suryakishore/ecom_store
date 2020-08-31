@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewAllBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:paddingStart="@dimen/twentyDp"
+            android:paddingLeft="@dimen/twentyDp"
+            android:paddingTop="@dimen/tenDp"
+            android:paddingEnd="@dimen/twentyDp"
+            android:paddingRight="@dimen/twentyDp"
+            android:paddingBottom="@dimen/tenDp"
+            android:src="@drawable/ic_back_btn"
+            android:tint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewAllTitle"
+            style="@style/Text.14sp.BlueZodiac.MontserratBold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAllCaps="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="OD1562217703" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCheckOutTxt"
+            style="@style/Text.14sp.BlueZodiac.MontserratBold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/checkOut"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCheckOutId"
+            style="@style/Text.14sp.BlueZodiac.MontserratBold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/fiveDp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCheckOutTxt"
+            tools:text="OD1562217703" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupCheckOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvCheckOutTxt,tvCheckOutId" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:paddingStart="@dimen/tenDp"
+            android:paddingLeft="@dimen/tenDp"
+            android:paddingTop="@dimen/tenDp"
+            android:paddingEnd="@dimen/zeroDp"
+            android:paddingRight="@dimen/zeroDp"
+            android:paddingBottom="@dimen/tenDp"
+            android:src="@drawable/ic_add_product"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cvMessage"
+            app:layout_constraintRight_toLeftOf="@+id/cvMessage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/twoDp"
+            app:cardElevation="@dimen/zeroDp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Text.14sp.White.MontserratSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/fifteenDp"
+                android:paddingTop="@dimen/tenDp"
+                android:paddingEnd="@dimen/fifteenDp"
+                android:paddingBottom="@dimen/tenDp"
+                app:srcCompat="@drawable/ic_chat_icon" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:background="@drawable/drawable_po_background"
+            android:drawablePadding="@dimen/dpTen"
+            android:padding="@dimen/dpSeven"
+            android:text="@string/po"
+            android:textAppearance="@style/HistoryDetailsViewValue"
+            android:textColor="@color/invoiceColor"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_pdf"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvItemQnty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@font/robotoregular"
+            android:textColor="@color/shark"
+            android:textSize="@dimen/sixteenSp" />
+        <TextView
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:id="@+id/tvItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:fontFamily="@font/robotoregular"
+            android:textColor="@color/shark"
+            android:textSize="@dimen/sixteenSp" />
+        <!--android:text="cookies and Creame mind tricks"-->
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:background="@null"
+                android:id="@+id/etQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:enabled="false"
+                android:fontFamily="@font/robotoregular"
+                android:inputType="number"
+                android:padding="@dimen/fiveDp"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+            <!-- android:text="15"-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/fiveDp"
+                android:layout_marginLeft="@dimen/fiveDp"
+                android:layout_marginRight="@dimen/fiveDp"
+                android:layout_marginStart="@dimen/fiveDp"
+                android:fontFamily="@font/robotoregular"
+                android:padding="@dimen/fiveDp"
+                android:text="X"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+
+            <TextView
+                android:id="@+id/tvCurrencySymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/fiveDp"
+                android:layout_marginStart="@dimen/fiveDp"
+                android:fontFamily="@font/robotoregular"
+                android:paddingBottom="@dimen/fiveDp"
+                android:paddingTop="@dimen/fiveDp"
+                android:paddingRight="0dp"
+                android:paddingEnd="0dp"
+                android:paddingLeft="@dimen/fiveDp"
+                android:paddingStart="@dimen/fiveDp"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+
+            <EditText
+                android:background="@null"
+                android:paddingTop="@dimen/fiveDp"
+                android:paddingBottom="@dimen/fiveDp"
+                android:id="@+id/etUnitPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:enabled="false"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:paddingTop="@dimen/fiveDp"
+            android:layout_marginBottom="-5dp"
+            android:gravity="end"
+            android:layout_gravity="top"
+            android:id="@+id/tvOrderListTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:fontFamily="@font/robotoregular"
+            android:textColor="@color/shark"
+            android:textSize="@dimen/sixteenSp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

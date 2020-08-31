@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/mapRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.app.delivxstore.utility.WorkaroundMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    map:cameraZoom="17" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    map:srcCompat="@drawable/location_pin_icon" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/mapRl"
+                android:layout_marginEnd="@dimen/twentyDp"
+                android:layout_marginLeft="@dimen/twentyDp"
+                android:layout_marginRight="@dimen/twentyDp"
+                android:layout_marginStart="@dimen/twentyDp"
+                android:layout_marginTop="@dimen/tenDp">
+
+                <TextView
+                    android:id="@+id/saveDelLocTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saveDeliveryLocation"
+                    android:textColor="@color/colorCharade"
+                    android:textSize="@dimen/sixteenSp" />
+
+                <TextView
+                    android:id="@+id/skipTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/fiveDp"
+                    android:text="@string/skip"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/twelveSp"
+                    android:visibility="gone"
+                    tools:ignore="RelativeOverlap" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addressTl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/saveDelLocTv"
+                    android:layout_marginTop="@dimen/tenDp">
+
+                    <EditText
+                        android:id="@+id/addressEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:ellipsize="end"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/address"
+                        android:inputType="text|textNoSuggestions|textVisiblePassword"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/tenDp"
+                        android:textColor="@color/colorCharade"
+                        android:textSize="@dimen/fifteenDp"
+                       />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/homeNoTl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addressTl"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/homeNoEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/housenO"
+                        android:inputType="text|textNoSuggestions|textVisiblePassword"
+                        android:paddingTop="@dimen/fifteenDp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteenSp"
+                         />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/landMarkTl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homeNoTl"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/landMarkEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/landMark"
+                        android:inputType="text|textNoSuggestions|textVisiblePassword"
+                        android:paddingTop="@dimen/fifteenDp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteenDp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/saveAsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/landMarkTl"
+
+                    android:layout_marginTop="@dimen/thirtyDp"
+                    android:text="@string/saveAs"
+                    android:textColor="@color/colorBoulder"
+                    android:textSize="@dimen/twelveSp" />
+
+                <RelativeLayout
+                    android:id="@+id/saveAsRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/saveAsTv"
+                    android:layout_marginTop="@dimen/tenDp">
+
+                    <RelativeLayout
+                        android:id="@+id/homeRl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/homeIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/save_location_home_icon"
+                            android:tint="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/homeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/homeView"
+                            android:layout_toEndOf="@+id/homeIv"
+                            android:layout_toRightOf="@+id/homeIv"
+                            android:paddingEnd="@dimen/tenDp"
+                            android:paddingRight="@dimen/tenDp"
+                            android:text="@string/home"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/twelveSp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <View
+                            android:id="@+id/homeView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/twoDp"
+                            android:layout_alignEnd="@+id/homeTv"
+                            android:layout_alignRight="@+id/homeTv"
+                            android:layout_below="@+id/homeIv"
+                            android:layout_marginTop="@dimen/fiveDp"
+                            android:background="@color/colorPrimary" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/workRl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/workIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/save_location_briefcase_icon"
+
+                            android:tint="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/workTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/workView"
+                            android:layout_toEndOf="@+id/workIv"
+                            android:layout_toRightOf="@+id/workIv"
+                            android:paddingEnd="@dimen/tenDp"
+                            android:paddingRight="@dimen/tenDp"
+                            android:text="@string/work"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/twelveSp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <View
+                            android:id="@+id/workView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/twoDp"
+                            android:layout_alignEnd="@+id/workTv"
+                            android:layout_alignRight="@+id/workTv"
+                            android:layout_below="@+id/workIv"
+                            android:layout_marginTop="@dimen/fiveDp"
+                            android:background="@color/colorPrimary" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/otherRl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/otherIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/save_location_location_icon"
+                            android:tint="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/otherTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/otherView"
+                            android:layout_toEndOf="@+id/otherIv"
+                            android:layout_toRightOf="@+id/otherIv"
+                            android:paddingEnd="@dimen/tenDp"
+                            android:paddingRight="@dimen/tenDp"
+                            android:text="@string/other"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/twelveSp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <View
+                            android:id="@+id/otherView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/twoDp"
+                            android:layout_alignEnd="@+id/otherTv"
+                            android:layout_alignRight="@+id/otherTv"
+                            android:layout_below="@+id/otherIv"
+                            android:layout_marginTop="@dimen/fiveDp"
+                            android:background="@color/colorPrimary" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ohtersTl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/saveAsRl"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/otherEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/other"
+                        android:inputType="textNoSuggestions"
+                        android:paddingEnd="@dimen/twentyDp"
+                        android:paddingRight="@dimen/twentyDp"
+                        android:paddingTop="@dimen/fifteenDp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteenSp"
+                        tools:ignore="RtlSymmetry" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ohtersTl"
+                    android:layout_marginBottom="@dimen/fifty_dp"
+                    android:layout_marginTop="@dimen/fifty_dp"
+                    android:background="@drawable/btn_drop_shadow">
+
+                    <Button
+                        android:id="@+id/saveAndProceedBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/saveAddress"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/fourteenSp" />
+
+                    <!--  <ProgressBar
+                          android:layout_width="20dp"
+                          android:layout_height="20dp"
+                          android:layout_centerVertical="true"
+                          android:layout_marginStart="@dimen/five_dp"
+                          android:layout_marginLeft="@dimen/five_dp"
+                          android:id="@+id/progressBar"
+                          style="?android:attr/progressBarStyleSmall"
+                          android:visibility="gone"/>
+  -->
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        map:srcCompat="@drawable/ic_back_btn" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

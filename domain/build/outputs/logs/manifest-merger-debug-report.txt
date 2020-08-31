@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+	package
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:11-41
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+	android:versionCode
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml:1:1-44
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+uses-sdk
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\domain\src\main\AndroidManifest.xml

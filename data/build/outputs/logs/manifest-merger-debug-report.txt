@@ -1,0 +1,41 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:1-7:12
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:1:11-69
+uses-sdk
+ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:5:5-59
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:5:5-59
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:5:5-59
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:5:5-59
+INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:5:5-59
+	tools:overrideLibrary
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:5:15-56
+	android:targetSdkVersion
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:5:5-59
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml
+		ADDED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml:5:5-59
+		INJECTED from D:\ecom_store\delivx_ecomm_android_store_v2\data\src\main\AndroidManifest.xml

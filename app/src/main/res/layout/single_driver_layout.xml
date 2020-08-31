@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.app.delivxstore.utility.CircleImageView
+        android:layout_marginStart="@dimen/twentyDp"
+        android:layout_marginLeft="@dimen/twentyDp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/profile"
+        android:id="@+id/ivDriverProfile" />
+
+    <TextView
+        android:layout_marginStart="@dimen/twentyDp"
+        android:layout_marginLeft="@dimen/twentyDp"
+        android:textColor="@color/shark"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="@dimen/fiveDp"
+        android:textSize="12sp"
+        android:text="@string/Now"
+        android:layout_toRightOf="@+id/ivDriverProfile"
+        android:id="@+id/tv_driverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginStart="@dimen/twentyDp"
+        android:layout_marginLeft="@dimen/twentyDp"
+        android:textColor="@color/shark"
+        android:fontFamily="@font/robotoregular"
+        android:layout_marginTop="@dimen/fiveDp"
+        android:textSize="9sp"
+        android:text="@string/Now"
+        android:layout_below="@+id/tv_driverName"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ivDriverProfile"
+        android:id="@+id/tv_driverMobNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ivDriverProfile" />
+
+    <View
+        android:layout_marginEnd="@dimen/twentyDp"
+        android:layout_marginRight="@dimen/twentyDp"
+        android:layout_marginStart="@dimen/twentyDp"
+        android:layout_marginLeft="@dimen/twentyDp"
+        android:layout_marginTop="@dimen/tenDp"
+        android:layout_below="@+id/ivDriverProfile"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+</RelativeLayout>

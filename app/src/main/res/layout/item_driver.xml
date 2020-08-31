@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemDriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDriverProfilePic"
+            android:layout_width="@dimen/dpSeventy"
+            android:layout_height="@dimen/dpSeventy"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDriverName"
+            style="@style/Text.15sp.BlackShade.MontserratMedium"
+            android:layout_width="@dimen/dpZero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginLeft="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/fifteenDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:layout_marginRight="@dimen/fifteenDp"
+            app:layout_constraintLeft_toRightOf="@+id/ivDriverProfilePic"
+            app:layout_constraintTop_toTopOf="@+id/ivDriverProfilePic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDriverNumber"
+            style="@style/HistoryDetailsViewHeader"
+            android:layout_width="@dimen/dpZero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginLeft="@dimen/fifteenDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:layout_marginRight="@dimen/fifteenDp"
+            android:layout_marginBottom="@dimen/fifteenDp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDriverProfilePic"
+            app:layout_constraintLeft_toRightOf="@+id/ivDriverProfilePic" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twoDp"
+            android:layout_marginStart="@dimen/fourtyDp"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:layout_marginEnd="@dimen/fourtyDp"
+            android:layout_marginBottom="@dimen/tenDp"
+            android:background="@drawable/dash_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivDriverProfilePic" />
+        <RadioButton
+            android:id="@+id/rbSelectDriver"
+            style="@style/Text.15sp.BlackShade.MontserratMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:buttonTint="@color/colorBlueZodiac"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDriverProfilePic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivDriverProfilePic" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

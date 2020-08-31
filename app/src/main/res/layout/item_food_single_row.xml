@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFoodItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemUnAvailableProductName"
+            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toStartOf="@+id/tvItemUnAvailableProductPrice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tvItemUnAvailableProductPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Beats Pro Over-Ear Headphones" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemUnAvailableProductPrice"
+            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="$ 12.00" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemQty"
+            style="@style/Text.13sp.Grey.MontserratRegular"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemUnAvailableProductName"
+            tools:text="Qty :1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemSizeAndColor"
+            style="@style/Text.13sp.Grey.MontserratRegular"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemQty"
+            tools:text="Size: 500ml" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemAttributes"
+            style="@style/Text.13sp.Grey.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fiveDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="@+id/tvItemUnAvailableProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemSizeAndColor"
+            tools:text="Dosage : 100 MG" />
+
+        <LinearLayout
+            android:id="@+id/llFoodAttributeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemAttributes" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReasonTxt"
+            style="@style/Text.14sp.sanMarino.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:includeFontPadding="false"
+            android:text="@string/reason"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="@+id/tvItemUnAvailableProductName"
+            app:layout_constraintTop_toBottomOf="@+id/llFoodAttributeGroup" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReason"
+            style="@style/Text.14sp.sanMarino.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fiveDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="@+id/tvItemUnAvailableProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvReasonTxt"
+            tools:text="Prescription is not clear" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvReasonTxt,tvReason" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsItemUnAvailableStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tenDp"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/fifteenDp"
+            android:paddingEnd="@dimen/fifteenDp"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReason">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemUnAvailable"
+                    style="@style/Text.12sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:background="@drawable/black_round_border"
+                    android:paddingStart="@dimen/twentyDp"
+                    android:paddingTop="@dimen/fiveDp"
+                    android:paddingEnd="@dimen/twentyDp"
+                    android:paddingBottom="@dimen/fiveDp"
+                    android:text="@string/unAvailable"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/viewItemUnAvailableDashed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twoDp"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:background="@drawable/dash_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsItemUnAvailableStatus" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

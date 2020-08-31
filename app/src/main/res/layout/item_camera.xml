@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/sixtyFiveDp"
+        android:layout_height="@dimen/sixtyFourDp"
+        android:layout_marginStart="@dimen/fifteenDp"
+        android:layout_marginLeft="@dimen/fifteenDp"
+        android:layout_marginEnd="@dimen/zeroDp"
+        android:layout_marginRight="@dimen/zeroDp"
+        android:background="@drawable/color_alto_bag">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/twentyDp"
+            android:paddingLeft="@dimen/twentyDp"
+            android:paddingTop="@dimen/twentyDp"
+            android:paddingEnd="@dimen/twentyDp"
+            android:paddingRight="@dimen/twentyDp"
+            android:paddingBottom="@dimen/twentyDp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_camera" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

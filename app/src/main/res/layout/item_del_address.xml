@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_select_address_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingRight="@dimen/tenDp"
+    android:paddingLeft="@dimen/tenDp">
+
+    <ImageView
+        android:id="@+id/iv_select_address_left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/pin_icon"
+        android:contentDescription="@string/app_name"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/iv_select_address_right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/pin_icon"
+        android:contentDescription="@string/app_name"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_select_address_left_icon"
+        android:layout_toEndOf="@id/iv_select_address_left_icon"
+        android:layout_toStartOf="@id/iv_select_address_right_icon"
+        android:layout_toLeftOf="@id/iv_select_address_right_icon"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/tenDp"
+        android:paddingTop="@dimen/tenDp"
+        android:paddingBottom="@dimen/tenDp"
+        android:paddingLeft="@dimen/eightDp"
+        android:paddingStart="@dimen/eightDp"
+        android:paddingRight="@dimen/eightDp"
+        android:paddingEnd="@dimen/eightDp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_select_address_fav_title"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:textDirection="locale"
+            android:textAlignment="viewStart"
+            android:gravity="start|center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/colorPortGore"
+            android:textSize="@dimen/fourteenSp"  />
+
+        <TextView
+            android:id="@+id/tv_select_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:gravity="start|center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/colorPortGore"
+            android:textSize="@dimen/fourteenSp"  />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/tenDp"
+        android:background="@color/lightWhite" />
+</RelativeLayout>

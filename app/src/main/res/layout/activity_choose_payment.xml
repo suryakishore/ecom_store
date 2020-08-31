@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/llActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/tenDp"
+            android:layout_marginLeft="@dimen/tenDp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_btn"
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/payOptions"
+            android:textColor="@color/white"
+            android:textSize="@dimen/eighteenSp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llActionBar"
+        android:layout_marginBottom="@dimen/tenDp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/walletTxtTv"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="start|center_vertical"
+                android:background="@color/colorwildsand"
+                android:paddingBottom="@dimen/tenDp"
+                android:paddingLeft="@dimen/twentyDp"
+                android:paddingRight="@dimen/twentyDp"
+                android:paddingTop="@dimen/tenDp"
+                android:text="@string/wallet"
+                android:textColor="@color/waterloo"
+                android:textSize="@dimen/fifteenSp"
+                android:visibility="gone"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/twentyDp"
+                android:layout_marginLeft="@dimen/twentyDp"
+                android:layout_marginRight="@dimen/twentyDp"
+                android:layout_marginStart="@dimen/twentyDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:paddingTop="@dimen/tenDp"
+                android:paddingBottom="@dimen/tenDp"
+                android:visibility="gone"
+                android:id="@+id/walletAmountRl">
+
+                <ImageView
+                    android:id="@+id/walletIconIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_wallet"
+                    android:tint="@color/shark"
+
+                    />
+
+                <TextView
+                    android:id="@+id/walletTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tenDp"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:layout_toEndOf="@+id/walletIconIv"
+                    android:layout_toRightOf="@+id/walletIconIv"
+                    android:text="@string/flexyCoin"
+                    android:textColor="@color/colorMirage"
+                    android:textSize="@dimen/thirteen_sp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/walletAmountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorMirage"
+                    android:textSize="@dimen/thirteen_sp"
+                    android:layout_marginLeft="@dimen/fiveDp"
+                    android:layout_marginRight="@dimen/fiveDp"
+                    android:layout_toStartOf="@+id/walletTickIv"
+                    android:layout_toLeftOf="@+id/walletTickIv"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/walletTickIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_check_off"
+                    android:contentDescription="@string/app_name"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginStart="@dimen/thirtyDp"
+                android:layout_marginLeft="@dimen/thirtyDp"
+                android:layout_marginEnd="@dimen/thirtyDp"
+                android:layout_marginRight="@dimen/thirtyDp"
+                android:layout_marginBottom="@dimen/fifteenDp"
+                android:weightSum="2"
+                android:id="@+id/walletPayLl"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tweleveDP"
+                    android:layout_marginEnd="@dimen/tweleveDP"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    >
+
+                    <TextView
+                        android:id="@+id/walletPayTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pay"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:paddingTop="@dimen/tenDp"
+                        android:paddingBottom="@dimen/tenDp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/thirteen_sp"
+                        android:background="@drawable/btn_drop_shadow"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/tweleveDP"
+                    android:layout_marginStart="@dimen/tweleveDP"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    >
+
+                    <TextView
+                        android:id="@+id/addMoneyTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addMoney"
+                        android:textAllCaps="true"
+                        android:paddingTop="@dimen/tenDp"
+                        android:paddingBottom="@dimen/tenDp"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/thirteen_sp"
+                        android:background="@drawable/btn_drop_shadow"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+
+                android:id="@+id/idealLabelTxtTv"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="start|center_vertical"
+                android:background="@color/colorwildsand"
+                android:paddingBottom="@dimen/tenDp"
+                android:paddingLeft="@dimen/twentyDp"
+                android:paddingRight="@dimen/twentyDp"
+                android:paddingTop="@dimen/tenDp"
+                android:text="@string/ideal"
+                android:textColor="@color/waterloo"
+                android:textSize="@dimen/fifteenSp"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/twentyDp"
+                android:layout_marginLeft="@dimen/twentyDp"
+                android:layout_marginRight="@dimen/twentyDp"
+                android:layout_marginStart="@dimen/twentyDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:paddingTop="@dimen/tenDp"
+                android:paddingBottom="@dimen/tenDp"
+                android:visibility="gone"
+                android:id="@+id/idealRl">
+
+                <ImageView
+                    android:id="@+id/idealIconIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_wallet"
+                    android:tint="@color/shark"
+
+                    />
+
+                <TextView
+                    android:id="@+id/idealTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tenDp"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:layout_toEndOf="@+id/idealIconIv"
+                    android:layout_toRightOf="@+id/idealIconIv"
+                    android:text="@string/idealPayment"
+                    android:textColor="@color/colorMirage"
+                    android:textSize="@dimen/thirteen_sp"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/idealTickIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_check_off"
+                    android:contentDescription="@string/app_name"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/payOnIdealTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/tenDp"
+                android:paddingTop="@dimen/tenDp"
+                android:background="@drawable/btn_drop_shadow"
+                android:gravity="center"
+                android:text="@string/pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sixteenSp"
+                android:layout_marginLeft="@dimen/thirtyDp"
+                android:layout_marginRight="@dimen/thirtyDp"
+                android:layout_marginTop="@dimen/twentyDp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/creditAndDebitTv"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:background="@color/colorwildsand"
+                android:paddingBottom="@dimen/tenDp"
+                android:paddingLeft="@dimen/twentyDp"
+                android:paddingRight="@dimen/twentyDp"
+                android:paddingTop="@dimen/tenDp"
+                android:text="@string/creditAndDebitCard"
+                android:visibility="gone"
+                android:textColor="@color/waterloo"
+                android:textSize="@dimen/fifteenSp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cardsListRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginBottom="@dimen/fiveDp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twentyDp"
+                android:layout_marginRight="@dimen/twentyDp"
+                android:paddingTop="@dimen/fiveDp"
+                android:paddingBottom="@dimen/fiveDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:visibility="gone"
+                android:id="@+id/newCardRl">
+
+                <ImageView
+                    android:id="@+id/addNewCardIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_credit_card"
+                    android:tint="@color/shark"
+                    />
+
+                <TextView
+                    android:id="@+id/addNewCardTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tenDp"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:layout_toEndOf="@+id/addNewCardIv"
+                    android:layout_toRightOf="@+id/addNewCardIv"
+                    android:text="@string/addNewCard"
+                    android:textColor="@color/colorMirage"
+                    android:textSize="@dimen/fifteenSp" />
+
+                <TextView
+                    android:id="@+id/payYourOrderTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addNewCardTv"
+                    android:layout_marginLeft="@dimen/tenDp"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:layout_toEndOf="@+id/addNewCardIv"
+                    android:layout_toRightOf="@+id/addNewCardIv"
+                    android:text="@string/payYourOrder"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/thirteen_sp"
+                   android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/payOnDelTxtTv"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="@dimen/tenDp"
+                android:background="@color/colorwildsand"
+                android:paddingBottom="@dimen/tenDp"
+                android:paddingLeft="@dimen/twentyDp"
+                android:paddingRight="@dimen/twentyDp"
+                android:paddingTop="@dimen/tenDp"
+                android:text="@string/payOnDel"
+                android:textColor="@color/waterloo"
+                android:textSize="@dimen/fifteenSp"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/twentyDp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/payOnDelRl">
+
+                    <ImageView
+                        android:id="@+id/payOnDelIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_money"
+                        android:contentDescription="@string/app_name"
+                        android:tint="@color/shark"
+                        />
+
+                    <TextView
+                        android:id="@+id/payDelTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/tenDp"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:layout_toEndOf="@+id/payOnDelIv"
+                        android:layout_toRightOf="@+id/payOnDelIv"
+                        android:text="@string/cash"
+                        android:textColor="@color/shark"
+                        android:textSize="@dimen/fifteenSp" />
+
+                    <ImageView
+                        android:id="@+id/payOnDelTickIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/ic_check_off"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_drop_shadow">
+
+        <Button
+            android:id="@+id/confirmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/sixteenSp"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/successRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/sucecssTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/twentyDp"
+            android:layout_marginRight="@dimen/twentyDp"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:gravity="center"
+            android:text="@string/orderSuccessMsg"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/twentySp" />
+
+        <ImageView
+            android:id="@+id/success_tick"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_above="@+id/sucecssTv"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/animated_check" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

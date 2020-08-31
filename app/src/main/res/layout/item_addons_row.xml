@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:weightSum="12">
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="4"
+        android:textStyle="italic"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textColor="@color/darkGray"
+        android:textSize="@dimen/twelveSp" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:enabled="false"
+            android:textStyle="italic"
+            android:inputType="number"
+            android:padding="@dimen/fiveDp"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/twelveSp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/fiveDp"
+            android:layout_marginLeft="@dimen/fiveDp"
+            android:layout_marginEnd="@dimen/fiveDp"
+            android:layout_marginRight="@dimen/fiveDp"
+            android:textStyle="italic"
+            android:padding="@dimen/fiveDp"
+            android:text="X"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/twelveSp" />
+
+        <TextView
+            android:id="@+id/tvCurrencySymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/fiveDp"
+            android:layout_marginLeft="@dimen/fiveDp"
+            android:textStyle="italic"
+            android:paddingStart="@dimen/fiveDp"
+            android:paddingLeft="@dimen/fiveDp"
+            android:paddingTop="@dimen/fiveDp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="@dimen/fiveDp"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/twelveSp" />
+
+        <EditText
+            android:id="@+id/etUnitPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:textStyle="italic"
+            android:enabled="false"
+            android:gravity="start"
+            android:inputType="numberDecimal"
+            android:paddingTop="@dimen/fiveDp"
+            android:paddingBottom="@dimen/fiveDp"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/twelveSp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvOrderListTotalPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginBottom="-5dp"
+        android:layout_weight="3"
+        android:textStyle="italic"
+        android:gravity="end"
+        android:paddingTop="@dimen/fiveDp"
+        android:textColor="@color/darkGray"
+        android:textSize="@dimen/twelveSp" />
+</LinearLayout>
+</layout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.ecomstore.shipment.ManualShippmentActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.ecomstore.shipment.ManualShippmentViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/zeroDp"
+            app:cardElevation="@dimen/fiveDp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_toolbar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvManualShippingTxt"
+            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+            android:layout_width="@dimen/dpZero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwenty"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/dpTwenty"
+            android:layout_marginBottom="@dimen/fiveDp"
+            android:includeFontPadding="false"
+            android:text="@string/manualShippingDescriptionTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvToolBar" />
+     <!--    <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/clPartner"
+             android:layout_width="@dimen/dpZero"
+             android:layout_height="wrap_content"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/tvManualShippingTxt"
+             android:paddingStart="@dimen/twentyDp"
+             android:paddingLeft="@dimen/twentyDp"
+             android:paddingTop="@dimen/twentyFiveDp"
+             android:paddingEnd="@dimen/twentyDp"
+             android:paddingRight="@dimen/twentyDp">-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiManualShippmentPartner"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:ErrorMessage="@{viewModel.errorMailMsg}"
+            android:hint="@string/partner"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvManualShippingTxt"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginLeft="@dimen/twentyDp"
+            android:layout_marginTop="@dimen/twentyFiveDp"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:layout_marginRight="@dimen/twentyDp"
+            >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etManualShippmentPartner"
+                style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:drawableTint="@color/colorBlueZodiac"
+                android:drawableEnd="@drawable/arrow_right"
+                android:drawableRight="@drawable/arrow_right"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/twentyDp"
+                android:theme="@style/EditText.Theme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--
+         </androidx.constraintlayout.widget.ConstraintLayout>
+-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiTrackingNumber"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:ErrorMessage="@{viewModel.errorMailMsg}"
+            android:hint="@string/trackingNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tiManualShippmentPartner">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etTrackingNumber"
+                style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/twentyDp"
+                android:theme="@style/EditText.Theme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--  <include
+              android:id="@+id/layoutButton"
+              layout="@layout/layout_button"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/layoutButton"
+                layout="@layout/layout_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

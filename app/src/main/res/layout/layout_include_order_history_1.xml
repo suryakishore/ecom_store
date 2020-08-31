@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.SearchView
+            android:visibility="gone"
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="Search an order"
+            android:background="@color/white"
+            android:layout_margin="@dimen/fiveDp" />
+        <EditText
+            android:padding="@dimen/tenDp"
+            android:drawablePadding="@dimen/tenDp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:id="@+id/searchViewEt"
+            android:textSize="@dimen/fifteenSp"
+            android:singleLine="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/searchText"
+            android:background="@color/white"
+            android:layout_margin="@dimen/fiveDp"
+            android:inputType="text" />
+
+    <!--    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:background="@color/gray">
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fourteenSp"
+                    android:text="Start Date"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/recctangle_solid_white_corner"
+                    android:layout_marginLeft="@dimen/tenDp"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:layout_marginBottom="@dimen/tenDp"
+                    android:fontFamily="@font/robotoregular"
+                    android:padding="@dimen/tenDp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/twelveSp"
+                    android:text="-"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/shark"
+                    android:padding="@dimen/fiveDp"
+                    android:fontFamily="@font/robotoregular" />
+
+                <TextView
+                    android:id="@+id/tvEndDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fourteenSp"
+                    android:text="End Date"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/recctangle_solid_white_corner"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_marginRight="@dimen/tenDp"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:layout_marginBottom="@dimen/tenDp"
+                    android:padding="@dimen/tenDp"
+                    android:fontFamily="@font/robotoregular"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray">
+                <TextView
+                    android:id="@+id/tvAllType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fourteenSp"
+                    android:text="All Type"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/recctangle_solid_white_corner"
+                    android:layout_marginLeft="@dimen/tenDp"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:layout_marginRight="@dimen/tenDp"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_marginBottom="@dimen/tenDp"
+                    android:padding="@dimen/tenDp"
+                    android:fontFamily="@font/robotoregular"
+                    android:elevation="@dimen/twoDp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>-->
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_storeName"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="16sp"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:layout_marginRight="@dimen/twentyDp"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginLeft="@dimen/twentyDp"
+            android:layout_marginBottom="@dimen/fiveDp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/llFirst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:id="@+id/rvPastOrders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fogWhite"
+        android:visibility="visible"/>
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/pBar"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_no_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/noHistory"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fifteenSp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/twentyDp"
+        android:layout_marginStart="@dimen/twentyDp"
+        android:layout_marginRight="@dimen/twentyDp"
+        android:layout_marginEnd="@dimen/twentyDp"
+        />
+
+</RelativeLayout>

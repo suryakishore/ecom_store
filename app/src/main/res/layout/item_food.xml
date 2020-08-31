@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/fiveDp"
+        android:paddingBottom="@dimen/fiveDp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderListOrderId"
+            style="@style/Text.10sp.Primary.MontserratReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:layout_marginRight="@dimen/fifteenDp"
+            android:layout_marginBottom="@dimen/twentyDp"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/tenDp"
+            android:paddingLeft="@dimen/tenDp"
+            android:paddingTop="@dimen/fiveDp"
+            android:paddingEnd="@dimen/tenDp"
+            android:paddingRight="@dimen/tenDp"
+            android:paddingBottom="@dimen/fiveDp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="kishore" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView_itemAttributes_value"
+        style="@style/Text.13sp.BlueDash.MontserratBold"
+        android:layout_width="@dimen/zeroDp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fiveDp"
+        android:layout_marginEnd="@dimen/fifteenDp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Size (KG):" />
+
+    <ImageView
+        android:id="@+id/imageView_itemAttributes_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zeroDp"
+        android:background="@drawable/circle_grey"
+        android:padding="@dimen/elevenDp"
+        android:src="@drawable/minus_icon"
+        android:tint="@color/colorBlueZodiac"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_itemAttributes_attributeQnt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_itemAttributes_attributeQnt" />
+
+    <TextView
+        android:id="@+id/textView_itemAttributes_attributeQnt"
+        style="@style/Text.15sp.BlueZodiac.MontserratSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fiveDp"
+        android:layout_marginTop="@dimen/tenDp"
+        android:layout_marginBottom="@dimen/tenDp"
+        android:background="@drawable/border_grey"
+        android:paddingStart="@dimen/fifteenDp"
+        android:paddingTop="@dimen/fiveDp"
+        android:paddingEnd="@dimen/fifteenDp"
+        android:paddingBottom="@dimen/fiveDp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_itemAttributes_remove"
+        app:layout_constraintTop_toBottomOf="@+id/textView_itemAttributes_value" />
+
+    <ImageView
+        android:id="@+id/imageView_itemAttributes_add"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zeroDp"
+        android:layout_marginStart="@dimen/fiveDp"
+        android:layout_marginEnd="@dimen/fifteenDp"
+        android:background="@drawable/circle_grey"
+        android:padding="@dimen/fourDp"
+        android:src="@drawable/ic_add"
+        android:tint="@color/colorBlueZodiac"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_itemAttributes_attributeQnt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_itemAttributes_attributeQnt"
+        app:layout_constraintTop_toTopOf="@+id/textView_itemAttributes_attributeQnt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

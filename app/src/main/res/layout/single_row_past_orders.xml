@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_marginTop="@dimen/fiveDp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/twoDp"
+    android:layout_margin="@dimen/fiveDp"
+    android:id="@+id/cvBackground"
+    app:cardCornerRadius="2dp"
+    android:background="@color/fogWhite">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="@dimen/fiveDp">
+            <TextView
+                android:id="@+id/tvPastOrderType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tvPastOrderId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp"
+                android:gravity="end"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lobolly"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="@dimen/fiveDp">
+            <TextView
+                android:id="@+id/tvPastOrderDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+
+                android:id="@+id/tvPastOrderStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/sixteenSp"
+                android:gravity="end"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="@dimen/fiveDp">
+            <TextView
+                android:id="@+id/tvPastOrderTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tvPastOrderAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp"
+                android:gravity="end"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="12"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/fiveDp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/taxType1Tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        style="@style/Text.14sp.Shark.MontserratRegular"
+        android:text="@string/serviceCharge"
+        android:textAlignment="viewStart"
+        android:layout_marginEnd="@dimen/sixteenDp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/taxType1AmountTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        style="@style/Text.14sp.Shark.MontserratRegular"
+        android:gravity="end"
+        android:textAlignment="viewEnd" />
+</LinearLayout>

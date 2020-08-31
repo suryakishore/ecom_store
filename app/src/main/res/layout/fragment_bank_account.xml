@@ -1,0 +1,98 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBankCode"
+        style="@style/Stripe.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpSeventeen"
+        android:layout_marginTop="@dimen/dpHundred"
+        android:layout_marginEnd="@dimen/dpTwenty"
+        android:hint="@string/bankCode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etBankCode"
+            style="@style/BankAccountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAccountNo"
+        style="@style/Stripe.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpSeventeen"
+        android:layout_marginTop="@dimen/dpTwentyFive"
+        android:layout_marginEnd="@dimen/dpTwenty"
+        android:hint="@string/accountNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilBankCode">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etAccountNo"
+            style="@style/BankAccountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilConfirmAccountNo"
+        style="@style/Stripe.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpSeventeen"
+        android:layout_marginTop="@dimen/dpTwentyFive"
+        android:layout_marginEnd="@dimen/dpTwenty"
+        android:hint="@string/confirmAccountNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilAccountNo">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etConfirmAccountNo"
+            style="@style/BankAccountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpSixty"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dpTwentyTwo"
+        android:layout_marginEnd="@dimen/dpTwentyTwo"
+        android:layout_marginBottom="@dimen/dpTwenty"
+        android:background="@drawable/drawable_save_ripple"
+        android:fontFamily="@font/montserrat_bold"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spEighteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbBankAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvOrderStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/eightyDp"
+    android:layout_margin="@dimen/fiveDp"
+    android:elevation="@dimen/zeroDp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/fourDp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvOrderStatusName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tenDp"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingStart="@dimen/tenDp"
+            android:paddingLeft="@dimen/tenDp"
+            android:paddingEnd="@dimen/tenDp"
+            android:paddingRight="@dimen/tenDp"
+            android:textAllCaps="true"
+            android:textColor="@color/blackShade"
+            android:textSize="@dimen/tenSp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Pending" />
+
+        <TextView
+            android:id="@+id/tvOrderStatusCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fiveDp"
+            android:layout_marginBottom="@dimen/tenDp"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:textColor="@color/blackShade"
+            android:textSize="@dimen/fifteenSp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvOrderStatusName"
+            app:layout_constraintLeft_toLeftOf="@+id/tvOrderStatusName"
+            app:layout_constraintRight_toRightOf="@+id/tvOrderStatusName"
+            app:layout_constraintStart_toStartOf="@+id/tvOrderStatusName"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderStatusName"
+            tools:text="3" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Button Focused-->
+    <item android:drawable="@drawable/round_rect_border" android:state_selected="true" />
+    <!-- Button Focused Pressed-->
+    <item android:drawable="@drawable/blue_round_rect_border" android:state_selected="false" />
+
+    <!-- Button Default Image-->
+    <item android:drawable="@drawable/blue_round_rect_border" />
+
+</selector>

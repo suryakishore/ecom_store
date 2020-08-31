@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_round_background">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAlertTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/alertTitleBackground"
+        android:gravity="center"
+        android:padding="@dimen/dpEighteen"
+        android:text="@string/alert"
+        android:textColor="@color/denim"
+        android:textSize="@dimen/spFifteen"
+        app:layout_constraintBottom_toTopOf="@+id/tvAlertBody"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpOne"
+        android:background="@color/divider"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlertTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAlertBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="@dimen/dpThirty"
+        android:paddingLeft="@dimen/dpThirty"
+        android:paddingTop="@dimen/dpTwenty"
+        android:paddingEnd="@dimen/dpThirty"
+        android:paddingRight="@dimen/dpThirty"
+        android:paddingBottom="@dimen/dpTwenty"
+        android:text="@string/cancelConfirm"
+        android:textColor="@color/denim"
+        android:textSize="@dimen/spTwelve"
+        app:layout_constraintBottom_toTopOf="@+id/viewDivider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDivider1" />
+
+    <View
+        android:id="@+id/viewDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpOne"
+        android:layout_weight="0.01"
+        android:background="@color/divider"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlertBody" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="@dimen/dpTwo"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/viewDivider2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAlertYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:background="@drawable/drawable_white_selector"
+            android:gravity="center"
+            android:padding="@dimen/dpEighteen"
+            android:text="@string/yesAlert"
+            android:textColor="@color/dustGray"
+            android:textSize="@dimen/spFifteen" />
+
+        <View
+            android:layout_width="@dimen/dpOne"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dpTen"
+            android:layout_marginBottom="@dimen/dpTen"
+            android:layout_weight="0.005"
+            android:background="@color/divider" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAlertNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:background="@drawable/drawable_white_selector"
+            android:gravity="center"
+            android:padding="@dimen/dpEighteen"
+            android:text="@string/noAlert"
+            android:textColor="@color/dustGray"
+            android:textSize="@dimen/spFifteen" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

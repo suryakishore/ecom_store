@@ -1,0 +1,279 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsViews"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpZero"
+        android:layout_marginStart="@dimen/dpSixteen"
+        android:layout_marginTop="@dimen/dpHundred"
+        android:layout_marginEnd="@dimen/dpSixteen"
+        android:layout_marginBottom="@dimen/dpThirtyFive"
+        android:background="@color/white"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTilViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUploadId"
+                style="@style/StripeAccountEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/photoID"
+                android:textColor="@color/noTransMessage"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/rlStripImage"
+                android:layout_width="@dimen/dpEightyFour"
+                android:layout_height="@dimen/dpEightyFour"
+                android:layout_marginTop="@dimen/dpTwenty"
+                android:background="@drawable/border_strip_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUploadId">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAddFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_strip_image" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/dpSeventy"
+                android:layout_marginTop="@dimen/dpHundred"
+                android:paddingTop="@dimen/dpTen"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_strip_close" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                style="@style/Stripe.TextInputLayout"
+                app:hintTextAppearance="@style/Stripe.TextInputLayout"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpFortyTwo"
+                android:hint="@string/firstName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlStripImage">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    style="@style/StripeAccountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/etLName"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLastName"
+                style="@style/Stripe.TextInputLayout"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpTwenty"
+                android:layout_marginTop="@dimen/dpFortyTwo"
+                app:hintTextAppearance="@style/Stripe.TextInputLayout"
+                android:hint="@string/lastName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tilName"
+                app:layout_constraintTop_toBottomOf="@+id/rlStripImage">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/etLName"
+                    style="@style/StripeAccountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDob"
+                style="@style/Stripe.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpThirty"
+                android:hint="@string/dobHint"
+                app:hintTextAppearance="@style/Stripe.TextInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilName">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDob"
+                    style="@style/StripeAccountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPersonalId"
+                style="@style/Stripe.TextInputLayout"
+                android:layout_width="match_parent"
+                app:hintTextAppearance="@style/Stripe.TextInputLayout"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpThirty"
+                android:hint="@string/ssn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilDob">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPersonalId"
+                    style="@style/StripeAccountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="9"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAddress"
+                style="@style/Stripe.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpThirty"
+                app:hintTextAppearance="@style/Stripe.TextInputLayout"
+                android:hint="@string/address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilPersonalId">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAddress"
+                    style="@style/StripeAccountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCity"
+                style="@style/Stripe.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpThirty"
+                android:hint="@string/city"
+                app:hintTextAppearance="@style/Stripe.TextInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilAddress">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etCity"
+                    style="@style/StripeAccountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilState"
+                style="@style/Stripe.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/Stripe.TextInputLayout"
+                android:layout_marginTop="@dimen/dpThirty"
+                android:hint="@string/state"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilCity">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etState"
+                    style="@style/StripeAccountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPostalCode"
+                style="@style/Stripe.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpThirty"
+                android:layout_marginBottom="@dimen/dpThirty"
+                app:hintTextAppearance="@style/Stripe.TextInputLayout"
+                android:hint="@string/zipCode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilState">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPostalCode"
+                    style="@style/StripeAccountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="@dimen/dpThreeThirty"
+        android:layout_height="@dimen/dpSixty"
+        android:layout_marginStart="@dimen/dpTwentyTwo"
+        android:layout_marginEnd="@dimen/dpTwentyTwo"
+        android:layout_marginBottom="@dimen/dpTwenty"
+        android:background="@drawable/drawable_save_ripple"
+        android:enabled="true"
+        android:fontFamily="@font/montserrat_bold"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spEighteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbStrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

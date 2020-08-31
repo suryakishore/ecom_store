@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:weightSum="12"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/fiveDp">
+
+    <TextView
+        android:id="@+id/taxType1Tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:textSize="@dimen/twelveSp"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/serviceCharge"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/fiveDp"
+        android:layout_marginRight="@dimen/sixteenDp"
+        android:layout_marginEnd="@dimen/sixteenDp"  />
+
+    <TextView
+        android:id="@+id/taxType1AmountTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:textSize="@dimen/twelveSp"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="end"
+        android:layout_marginRight="@dimen/tweleveDP"
+        android:layout_marginEnd="@dimen/tweleveDP"
+        android:padding="@dimen/fiveDp" />
+</LinearLayout>

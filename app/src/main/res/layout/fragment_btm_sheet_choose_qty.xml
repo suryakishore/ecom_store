@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.ecomstore.addproduct.addproductbottomsheet.ChooseQtyViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/tenDp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivItemAddProduct"
+                android:layout_width="@dimen/eightyDp"
+                android:layout_height="@dimen/eightyDp"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:src="@drawable/ic_place_holder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvItemName"
+                style="@style/Text.14sp.BlackShade.MontserratMedium"
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                android:maxLines="2"
+                app:layout_constraintEnd_toStartOf="@+id/ivCross"
+                app:layout_constraintStart_toStartOf="@+id/tvItemBrand"
+                app:layout_constraintTop_toTopOf="@+id/ivItemAddProduct"
+                tools:text="Mallika Mangojnkdnkvkcvbx cvn cxnv cvn xcv jnx cv" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/twentyDp"
+                android:tint="@color/blackApprox"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivItemAddProduct"
+                app:srcCompat="@drawable/ic_close" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvItemBrand"
+                style="@style/Text.14sp.SilverChalice.MontserratMedium"
+                android:layout_width="@dimen/dpZero"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                app:layout_constraintLeft_toRightOf="@+id/ivItemAddProduct"
+                app:layout_constraintTop_toBottomOf="@+id/tvItemName"
+                tools:text="Fresh" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvItemPrice"
+                style="@style/Text.14sp.BlackShade.MontserratMedium"
+                android:layout_width="@dimen/dpZero"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                app:layout_constraintLeft_toRightOf="@+id/ivItemAddProduct"
+                app:layout_constraintTop_toBottomOf="@+id/tvItemBrand"
+                tools:text="$ 150" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBasePrice"
+                style="@style/Text.14sp.BlackShade.MontserratMedium"
+                android:layout_width="@dimen/dpZero"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tvItemPrice"
+                app:layout_constraintLeft_toRightOf="@+id/tvItemPrice"
+                app:layout_constraintTop_toTopOf="@+id/tvItemPrice"
+                tools:text="$ 150" />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tenDp"
+                android:layout_marginTop="@dimen/twentyDp"
+                android:background="@color/colorWildSand"
+                app:layout_constraintTop_toBottomOf="@+id/ivItemAddProduct">
+
+            </View>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAddOrEnter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/clConfirm"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVariantItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemChooseQty"
+                    style="@style/Text.16sp.Nero.PoppinsMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twentyDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:text="@string/itemQuantity_chooseQuantity"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvVariantItems" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQtyMinus"
+                    style="@style/Text.16sp.Nero.PoppinsMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:background="@drawable/rectangle_stroke_corner_gray"
+                    android:paddingStart="@dimen/tenDp"
+                    android:paddingLeft="@dimen/tenDp"
+                    android:paddingTop="@dimen/fiveDp"
+                    android:paddingEnd="@dimen/tenDp"
+                    android:paddingRight="@dimen/tenDp"
+                    android:paddingBottom="@dimen/fiveDp"
+                    android:text="@string/minus"
+                    app:layout_constraintLeft_toLeftOf="@+id/tvItemChooseQty"
+                    app:layout_constraintStart_toStartOf="@+id/tvItemChooseQty"
+                    app:layout_constraintTop_toBottomOf="@+id/tvItemChooseQty" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemQty"
+                    style="@style/Text.20sp.Primary.MontserratSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/twentyDp"
+                    android:paddingLeft="@dimen/twentyDp"
+                    android:paddingEnd="@dimen/twentyDp"
+                    android:paddingRight="@dimen/twentyDp"
+                    android:text="@string/one"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvQtyMinus"
+                    app:layout_constraintLeft_toRightOf="@+id/tvQtyMinus"
+                    app:layout_constraintStart_toEndOf="@+id/tvQtyMinus"
+                    app:layout_constraintTop_toTopOf="@+id/tvQtyMinus" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQtyPlus"
+                    style="@style/Text.16sp.Nero.PoppinsMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_stroke_corner_gray"
+                    android:paddingStart="@dimen/tenDp"
+                    android:paddingLeft="@dimen/tenDp"
+                    android:paddingTop="@dimen/fiveDp"
+                    android:paddingEnd="@dimen/tenDp"
+                    android:paddingRight="@dimen/tenDp"
+                    android:paddingBottom="@dimen/fiveDp"
+                    android:text="@string/plus"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvQtyMinus"
+                    app:layout_constraintLeft_toRightOf="@+id/tvItemQty"
+                    app:layout_constraintStart_toEndOf="@+id/tvItemQty"
+                    app:layout_constraintTop_toTopOf="@+id/tvQtyMinus" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/vgAddItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="rvVariantItems,tvItemChooseQty,tvQtyMinus,tvItemQty,tvQtyPlus"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/vgQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="tiWeight,tvItemWeight,tiQuantity,tvItemPcs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiQuantity"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:ErrorMessage="@{viewmodel.errorQuantityMsg}"
+                    android:hint="@string/enterQuantity"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etQuantity"
+                        style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:inputType="number"
+                        android:padding="@dimen/twentyDp"
+                        android:theme="@style/EditText.Theme" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiWeight"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:ErrorMessage="@{viewmodel.errorWeightMsg}"
+                    android:hint="@string/enterWight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiQuantity">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etWeight"
+                        style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/twentyDp"
+                        android:theme="@style/EditText.Theme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemPcs"
+                    style="@style/Text.14sp.BlackShade.MontserratMedium"
+                    android:layout_width="@dimen/dpZero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/thirtyDp"
+                    android:layout_marginRight="@dimen/thirtyDp"
+                    android:text="@string/pcs"
+                    app:layout_constraintBottom_toBottomOf="@+id/tiQuantity"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tiQuantity" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemWeight"
+                    style="@style/Text.14sp.BlackShade.MontserratMedium"
+                    android:layout_width="@dimen/dpZero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/thirtyDp"
+                    android:layout_marginRight="@dimen/thirtyDp"
+                    android:text="@string/kg"
+                    app:layout_constraintBottom_toBottomOf="@+id/tiWeight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tiWeight" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{viewmodel.progressVisible}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <include
+                    android:id="@+id/layoutButton"
+                    layout="@layout/layout_button" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

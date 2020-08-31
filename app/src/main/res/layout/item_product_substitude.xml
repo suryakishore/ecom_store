@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fiveDp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemAddProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fiveDp"
+        android:paddingBottom="@dimen/fiveDp"
+        android:background="@drawable/layout_border"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubstitute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/recommended"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/fiveDp"
+            android:layout_marginStart="@dimen/fiveDp"
+            style="@style/Text.14sp.BlackShade.MontserratMedium"
+            android:background="@drawable/text_bg_border"
+            android:padding="@dimen/dpFive"
+            android:textSize="@dimen/tenSp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivItemAddProduct"
+            android:layout_width="@dimen/eightyDp"
+            android:layout_height="@dimen/eightyDp"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/fifteenDp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_place_holder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubstitute" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemName"
+            style="@style/Text.14sp.BlackShade.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:layout_marginRight="@dimen/fifteenDp"
+            android:layout_marginBottom="@dimen/eightDp"
+            android:maxLines="2"
+            app:layout_constraintEnd_toStartOf="@+id/tvItemPrice"
+            app:layout_constraintRight_toLeftOf="@+id/tvItemPrice"
+            app:layout_constraintStart_toStartOf="@+id/tvItemBrand"
+            app:layout_constraintTop_toTopOf="@+id/ivItemAddProduct"
+            tools:text="Mallika Mangojnkdnkvkcvbx cvn cxnv cvn xcv jnx cv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemPrice"
+            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvItemName"
+            tools:text="$ 12.00" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemBrand"
+            style="@style/Text.12sp.BlackShade.MontserratMedium"
+            android:layout_width="@dimen/dpZero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tenDp"
+            android:layout_marginLeft="@dimen/tenDp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/tenDp"
+            android:layout_marginRight="@dimen/tenDp"
+            app:layout_constraintLeft_toRightOf="@+id/ivItemAddProduct"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemName"
+            tools:text="Qty: 1 Kg . $ 20.00" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsItemUnAvailableStatus"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tenDp"
+            android:clipToPadding="false"
+
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="@+id/tvItemName"
+            app:layout_constraintStart_toStartOf="@+id/tvItemName"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemBrand">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvForcePick"
+                    style="@style/Text.12sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:background="@drawable/black_round_border"
+                    android:paddingStart="@dimen/fiveDp"
+                    android:paddingTop="@dimen/fiveDp"
+                    android:paddingEnd="@dimen/fiveDp"
+                    android:paddingBottom="@dimen/fiveDp"
+                    android:text="@string/forcePick"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRemove"
+                    style="@style/Text.12sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fiveDp"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:background="@drawable/black_round_border"
+                    android:paddingStart="@dimen/fiveDp"
+                    android:paddingTop="@dimen/fiveDp"
+                    android:paddingEnd="@dimen/fiveDp"
+                    android:paddingBottom="@dimen/fiveDp"
+                    android:text="@string/remove"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvForcePick" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApproved"
+            style="@style/Text.12sp.BlueZodiac.MontserratSemiBold"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/fiveDp"
+            android:text="@string/notResponding"
+            android:textColor="@color/red"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/hsItemUnAvailableStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/hsItemUnAvailableStatus"
+            app:layout_constraintTop_toTopOf="@+id/hsItemUnAvailableStatus" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemAddedPending"
+            style="@style/Text.12sp.corn.PoppinsSemiBold"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:layout_marginBottom="@dimen/fiveDp"
+            android:includeFontPadding="false"
+            android:text="@string/pendingTxt"
+            android:textAllCaps="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/tvItemAddedReviewTiming"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemAddedReviewTiming"
+            style="@style/Text.12sp.BlackShade.PoppinsSemiBold"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:includeFontPadding="false"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tvItemBrand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvItemBrand"
+            tools:text="00:25" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupConfirmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="hsItemUnAvailableStatus,tvApproved" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupAddedPending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvItemAddedReviewTiming,tvItemAddedPending" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupSubstitute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tvItemReplaceWith,tvItemPending,tvItemReviewTiming,
+            ivItemReplacedProduct,tvItemReplacedItemName,tvItemReplacedBrand,tvItemReplacedPrice" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupOldSubtitute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="ivItemAddProduct,tvItemName,
+            tvItemPrice,tvItemBrand"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemReplaceWith"
+            style="@style/Text.12sp.WistFul.MontserratReg"
+            android:layout_width="@dimen/dpZero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginLeft="@dimen/tenDp"
+            android:layout_marginTop="@dimen/fifteenDp"
+            android:layout_marginBottom="@dimen/tenDp"
+            android:drawableStart="@drawable/ic_replace"
+            android:drawableLeft="@drawable/ic_replace"
+            android:drawablePadding="@dimen/fifteenDp"
+            android:gravity="center"
+            android:text="@string/replaceWith"
+            app:layout_constraintStart_toStartOf="@+id/ivItemAddProduct"
+            app:layout_constraintTop_toBottomOf="@+id/ivItemAddProduct" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemPending"
+            style="@style/Text.12sp.corn.PoppinsSemiBold"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:layout_marginBottom="@dimen/fiveDp"
+            android:includeFontPadding="false"
+            android:text="@string/pendingTxt"
+            android:textAllCaps="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/tvItemReviewTiming"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemReviewTiming"
+            style="@style/Text.12sp.BlackShade.PoppinsSemiBold"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:includeFontPadding="false"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tvItemReplaceWith"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvItemReplaceWith"
+            tools:text="00:25" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivItemReplacedProduct"
+            android:layout_width="@dimen/eightyDp"
+            android:layout_height="@dimen/eightyDp"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:layout_marginBottom="@dimen/tenDp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_place_holder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemReplaceWith" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemReplacedItemName"
+            style="@style/Text.14sp.BlackShade.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:layout_marginRight="@dimen/fifteenDp"
+            android:layout_marginBottom="@dimen/eightDp"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvItemReplacedPrice"
+            app:layout_constraintRight_toLeftOf="@+id/tvItemReplacedPrice"
+            app:layout_constraintStart_toStartOf="@+id/tvItemBrand"
+            app:layout_constraintTop_toTopOf="@+id/ivItemReplacedProduct"
+            tools:text="Mallika Mangojnkdnkvkcvbx cvn cxnv cvn xcv jnx cv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemReplacedPrice"
+            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvItemReplacedItemName"
+            tools:text="$ 12.00" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemReplacedBrand"
+            style="@style/Text.14sp.BlackShade.MontserratMedium"
+            android:layout_width="@dimen/dpZero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tenDp"
+            android:layout_marginLeft="@dimen/tenDp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/tenDp"
+            android:layout_marginRight="@dimen/tenDp"
+            android:includeFontPadding="false"
+            app:layout_constraintLeft_toRightOf="@+id/ivItemReplacedProduct"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemReplacedItemName"
+            tools:text="Qty: 1 Kg . $ 20.00" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsItemUnAvailableStatusReplace"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tenDp"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/tvItemReplacedItemName"
+            app:layout_constraintStart_toStartOf="@+id/tvItemReplacedItemName"
+            app:layout_constraintTop_toBottomOf="@+id/ivItemReplacedProduct">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvForcePickReplace"
+                    style="@style/Text.12sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:background="@drawable/black_round_border"
+                    android:paddingStart="@dimen/fiveDp"
+                    android:paddingTop="@dimen/fiveDp"
+                    android:paddingEnd="@dimen/fiveDp"
+                    android:paddingBottom="@dimen/fiveDp"
+                    android:text="@string/forcePick"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRemoveReplace"
+                    style="@style/Text.12sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fiveDp"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:background="@drawable/black_round_border"
+                    android:paddingStart="@dimen/fiveDp"
+                    android:paddingTop="@dimen/fiveDp"
+                    android:paddingEnd="@dimen/fiveDp"
+                    android:paddingBottom="@dimen/fiveDp"
+                    android:text="@string/remove"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvForcePickReplace" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddNotResponding"
+            style="@style/Text.12sp.BlueZodiac.MontserratSemiBold"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tenDp"
+           android:layout_marginEnd="@dimen/fiveDp"
+            android:text="@string/notResponding"
+            android:textColor="@color/red"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/hsItemUnAvailableStatusReplace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/hsItemUnAvailableStatusReplace"
+            app:layout_constraintTop_toTopOf="@+id/hsItemUnAvailableStatusReplace" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupReplaceSubstituteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="hsItemUnAvailableStatusReplace,tvAddNotResponding"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewItemDashed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tenDp"
+            app:layout_constraintTop_toBottomOf="@+id/clItemAddProduct"
+            android:background="@color/whiteLight"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</layout>

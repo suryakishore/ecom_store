@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/ivToolbarBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:paddingTop="@dimen/tenDp"
+                app:srcCompat="@drawable/arrow_icon"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/tvToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ivToolbarBack"
+                android:layout_toRightOf="@+id/ivToolbarBack"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/manageAddress"
+                android:textColor="@color/portGore"
+                android:textSize="@dimen/twentySp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view_top_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/shadow_top_layout"
+        android:visibility="invisible" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addNewItemsRl"
+        android:layout_below="@id/view_top_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/addNewItemsRl"
+            android:layout_alignParentTop="true"
+            android:background="@color/whisper"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlToolbarDummy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/tenDp"
+                android:descendantFocusability="blocksDescendants"
+                android:paddingTop="@dimen/tenDp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteenDp"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/manageAddress"
+                    android:textColor="@color/portGore"
+                    android:textSize="@dimen/twentyFiveSp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/addNewAddressRl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/addresstxtTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/tenDp"
+                    android:paddingEnd="0dp"
+                    android:paddingLeft="@dimen/tenDp"
+                    android:paddingRight="0dp"
+                    android:paddingStart="@dimen/tenDp"
+                    android:paddingTop="@dimen/tenDp"
+                    android:text="@string/savedAddress"
+                    android:textColor="@color/colorDoveGray"
+                    android:textSize="@dimen/fifteenSp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/manageAddressRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/addresstxtTv" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/addNewItemsRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/tenDp"
+        android:layout_marginEnd="@dimen/twentyDp"
+        android:layout_marginLeft="@dimen/twentyDp"
+        android:layout_marginRight="@dimen/twentyDp"
+        android:layout_marginStart="@dimen/twentyDp"
+        android:background="@drawable/btn_drop_shadow">
+
+        <Button
+            android:id="@+id/addAddressBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/add_new_address"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/emptySavedAddressRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/emptySavedAddressIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/cancel"
+            android:src="@drawable/empty_save_address" />
+
+        <TextView
+            android:id="@+id/noItemsInWishListTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emptySavedAddressIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:text="@string/noSavedAddress"
+            android:textColor="@color/silverChalice"
+            android:textSize="@dimen/thirteen_sp" />
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

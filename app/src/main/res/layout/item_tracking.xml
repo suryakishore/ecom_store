@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwenty"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/green_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTrackingStatus"
+            style="@style/Text.14sp.BlackShade.MontserratBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwenty"
+            android:includeFontPadding="false"
+            app:layout_constraintLeft_toRightOf="@+id/ivCircle"
+            app:layout_constraintTop_toTopOf="@+id/ivCircle"
+            tools:text="asmsa" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderStatusDate"
+            style="@style/Text.13sp.BlackShade.MontserratRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwenty"
+            android:layout_marginTop="@dimen/dpFive"
+            android:includeFontPadding="false"
+            android:paddingBottom="@dimen/fifteenDp"
+            app:layout_constraintLeft_toRightOf="@+id/ivCircle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTrackingStatus"
+            tools:text="ankascksan" />
+
+
+        <View
+            android:id="@+id/viewTrackIndicatorHalf1"
+            android:layout_width="@dimen/dpThree"
+            android:layout_height="@dimen/zeroDp"
+            android:background="@color/lime"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOrderStatusDate"
+            app:layout_constraintEnd_toEndOf="@+id/ivCircle"
+            app:layout_constraintStart_toStartOf="@+id/ivCircle"
+            app:layout_constraintTop_toBottomOf="@+id/ivCircle">
+
+        </View>
+
+        <View
+            android:id="@+id/viewTrackIndicatorHalf2"
+            android:layout_width="@dimen/dpThree"
+            android:layout_height="@dimen/thirtyDp"
+            android:background="@color/lime"
+            app:layout_constraintEnd_toEndOf="@+id/viewTrackIndicatorHalf1"
+            app:layout_constraintStart_toStartOf="@+id/viewTrackIndicatorHalf1"
+            app:layout_constraintTop_toBottomOf="@+id/viewTrackIndicatorHalf1">
+
+        </View>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply from: "$rootDir/version.gradle"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 29
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+//TODO: local maven deployment
+
+dependencies {
+    implementation "com.google.android.gms:play-services-location:${googleServices}"
+    implementation "com.google.android.gms:play-services-places:${googleServices}"
+    implementation "io.reactivex.rxjava2:rxjava:${rxJavaReactive}"
+}

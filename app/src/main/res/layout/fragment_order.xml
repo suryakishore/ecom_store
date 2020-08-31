@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_color">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:padding="@dimen/tenDp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/eighteenSp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlSearchOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                android:background="@drawable/rectangle_for_light_gray"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fiveDp"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="@dimen/tenDp"
+                    android:hint="@string/search"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/twoDp"
+                    android:paddingBottom="@dimen/twoDp" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_storeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentyDp"
+                android:layout_marginLeft="@dimen/twentyDp"
+                android:layout_marginEnd="@dimen/twentyDp"
+                android:layout_marginRight="@dimen/twentyDp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tbAssignDriver"
+                style="@style/CustomTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pippin"
+                android:paddingStart="@dimen/fourDp"
+                android:paddingEnd="@dimen/fourDp"
+                android:visibility="gone"
+                app:tabGravity="fill"
+                app:tabIndicator="@drawable/assign_driver_bg"
+                app:tabIndicatorColor="@color/transactions"
+                app:tabIndicatorGravity="bottom"
+                app:tabIndicatorHeight="@dimen/fourDp"
+                app:tabMaxWidth="0dp"
+                app:tabSelectedTextColor="@color/blackShade"
+                app:tabTextAppearance="@style/loginTabDesign"
+                app:tabTextColor="@color/aluminium" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpAssignTabViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_color"
+                android:visibility="gone" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/fiveDp"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_color"
+                    android:nestedScrollingEnabled="false"
+                    android:padding="5dp" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clNoOrders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.45" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNoOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_empty_orders"
+                app:layout_constraintBottom_toTopOf="@+id/guideLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twentyDp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/noOrdersTxt"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/ivNoOrders"
+                app:layout_constraintLeft_toLeftOf="@+id/ivNoOrders"
+                app:layout_constraintRight_toRightOf="@+id/ivNoOrders"
+                app:layout_constraintStart_toStartOf="@+id/ivNoOrders"
+                app:layout_constraintTop_toBottomOf="@+id/ivNoOrders" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvInventoryItem"
+    android:layout_width="130dp"
+    android:layout_height="140dp"
+    android:layout_margin="5dp"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="4dp">
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="120dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transperent"
+        android:scaleType="fitXY"
+        android:src="@drawable/add_photo" />
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteLight"
+        android:paddingTop="@dimen/tenDp"
+        android:paddingBottom="@dimen/tenDp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBagsTxt"
+            style="@style/Text.12sp.DeepCove.MontserratBold"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/fifteenDp"
+            android:text="@string/bags"
+            android:textAllCaps="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemPrice"
+            style="@style/Text.14sp.BlueSmoke.MontserratRegular"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBagsTxt"
+            app:layout_constraintLeft_toRightOf="@+id/tvBagsTxt"
+            app:layout_constraintTop_toTopOf="@+id/tvBagsTxt"
+            tools:text="$ 44.35 | 3 Items" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dpFifteen"
+            android:background="@drawable/drawable_po_background"
+            android:drawablePadding="@dimen/dpTen"
+            android:padding="@dimen/dpSeven"
+            android:text="@string/label"
+            android:textAppearance="@style/HistoryDetailsViewValue"
+            android:textColor="@color/invoiceColor"
+            app:drawableStartCompat="@drawable/ic_pdf"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBagsTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvBagsTxt" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBoxId"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBagsTxt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

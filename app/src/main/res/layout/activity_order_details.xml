@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutOrderDetailsMainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOrderDetailsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/zeroDp"
+            app:cardElevation="@dimen/fiveDp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_toolbar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.amar.library.ui.StickyScrollView
+            android:id="@+id/nsOrderDetailsScrollContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/fifteenDp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutOrderDetailsBottomOptions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvOrderDetailsToolbar"
+            app:stickyHeader="@+id/llOrderDetailsOrderStatus">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/orderDetailsTrackDetails"
+                    layout="@layout/layout_track_order_details"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenDp"
+                    android:background="@color/whiteLight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orderDetailsTrackDetails" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCustomerOrderId"
+                    style="@style/Text.14sp.BlueSmoke.MontserratRegular"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:text="@string/customerOrderId"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCustomerOrderIdValue"
+                    style="@style/Text.13sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCustomerOrderId"
+                    tools:text="31562217703" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupStoreId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="tvStoreOrderId,tvStoreOrderIdValue" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStoreOrderId"
+                    style="@style/Text.14sp.BlueSmoke.MontserratRegular"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:text="@string/storeOrderId"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCustomerOrderIdValue" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStoreOrderIdValue"
+                    style="@style/Text.13sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStoreOrderId"
+                    tools:text="31562217703" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReceipt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/twentyDp"
+                    android:background="@drawable/drawable_po_background"
+                    android:drawablePadding="@dimen/dpTen"
+                    android:padding="@dimen/dpSeven"
+                    android:text="@string/receipt"
+                    android:textAppearance="@style/HistoryDetailsViewValue"
+                    android:textColor="@color/invoiceColor"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_pdf"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvStoreOrderIdValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvStoreOrderId" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView4"
+                    style="@style/Text.14sp.BlueSmoke.MontserratRegular"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyFiveDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:text="@string/orderDetails_totalAmount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStoreOrderIdValue" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOrderDetailsPriceValue"
+                    style="@style/Text.13sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    tools:text="$ 536.73" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView2"
+                    style="@style/Text.14sp.BlueSmoke.MontserratRegular"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyFiveDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:text="@string/orderDetails_customerName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOrderDetailsPriceValue" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOrderDetailsCustomerName"
+                    style="@style/Text.13sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    tools:text="Sam Alexander" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fiveDp"
+                    android:paddingStart="@dimen/fifteenDp"
+                    android:paddingTop="@dimen/tenDp"
+                    android:paddingEnd="@dimen/fifteenDp"
+                    android:paddingBottom="@dimen/tenDp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOrderDetailsCustomerName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOrderDetailsCustomerName"
+                    app:srcCompat="@drawable/ic_call_icon" />
+
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="@dimen/oneDp"
+                    android:layout_height="@dimen/zeroDp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/view4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOrderDetailsCustomerName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView3"
+                    style="@style/Text.14sp.BlueSmoke.MontserratRegular"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:text="@string/orderDetailsOrderType"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOrderDetailsOrderType"
+                    style="@style/Text.13sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    tools:text="Ecom" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/twentyDp"
+                    android:background="@drawable/drawable_po_background"
+                    android:drawablePadding="@dimen/dpTen"
+                    android:padding="@dimen/dpSeven"
+                    android:text="@string/po"
+                    android:textAppearance="@style/HistoryDetailsViewValue"
+                    android:textColor="@color/invoiceColor"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_pdf"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvOrderDetailsPriceValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tenDp"
+                    android:layout_marginTop="@dimen/fifteenDp"
+                    android:background="@color/whiteLight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewOrderDetailsCustomerName" />
+
+
+                <include
+                    android:id="@+id/layoutBag"
+                    layout="@layout/item_bags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAssignDriver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutBag">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAssignedDriver"
+                        style="@style/Text.13sp.Shark.MontserratBold"
+                        android:layout_width="@dimen/dpZero"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:gravity="start"
+                        android:padding="@dimen/fiveDp"
+                        android:text="@string/assignDriver"
+                        android:textAllCaps="true"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDriverProfilePic"
+                        android:layout_width="@dimen/dpSeventy"
+                        android:layout_height="@dimen/dpSeventy"
+                        android:layout_marginStart="@dimen/twentyDp"
+                        android:src="@drawable/profile"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAssignedDriver" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDriverName"
+                        style="@style/Text.15sp.BlackShade.MontserratMedium"
+                        android:layout_width="@dimen/dpZero"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fifteenDp"
+                        android:layout_marginLeft="@dimen/fifteenDp"
+                        android:layout_marginTop="@dimen/fifteenDp"
+                        android:layout_marginEnd="@dimen/fifteenDp"
+                        android:layout_marginRight="@dimen/fifteenDp"
+                        app:layout_constraintLeft_toRightOf="@+id/ivDriverProfilePic"
+                        app:layout_constraintTop_toTopOf="@+id/ivDriverProfilePic"
+                        tools:text="@string/bankDetails" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDriverStatus"
+                        style="@style/Text.12sp.BrightGray.poppins.Bold"
+                        android:layout_width="@dimen/dpZero"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fifteenDp"
+                        android:layout_marginLeft="@dimen/fifteenDp"
+                        android:layout_marginEnd="@dimen/fifteenDp"
+                        android:layout_marginRight="@dimen/fifteenDp"
+                        android:layout_marginBottom="@dimen/fifteenDp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivDriverProfilePic"
+                        app:layout_constraintLeft_toRightOf="@+id/ivDriverProfilePic"
+                        tools:text="@string/bankDetails" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvDriverCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/fifteenDp"
+                        app:cardBackgroundColor="@color/historyOrderStatus"
+                        app:cardCornerRadius="@dimen/twoDp"
+                        app:cardElevation="@dimen/zeroDp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivDriverProfilePic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ivDriverProfilePic">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/Text.14sp.White.MontserratSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="@dimen/fifteenDp"
+                            android:paddingTop="@dimen/tenDp"
+                            android:paddingEnd="@dimen/fifteenDp"
+                            android:paddingBottom="@dimen/tenDp"
+                            android:text=""
+                            app:srcCompat="@drawable/ic_phone" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrderDetailsOrderStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:background="@color/whiteLight"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/clAssignDriver">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tlOrderDetailsOrderStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ninetyDp"
+                        android:background="@color/whiteLight"
+                        android:clipToPadding="false"
+                        app:tabIndicatorHeight="@dimen/zeroDp"
+                        app:tabMode="fixed"
+                        app:tabPaddingBottom="@dimen/minusOneDp"
+                        app:tabPaddingEnd="@dimen/fiveDp"
+                        app:tabPaddingStart="@dimen/fiveDp"
+                        app:tabPaddingTop="@dimen/minusOneDp" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpager_orderDetails_viewPager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tenDp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llOrderDetailsOrderStatus">
+
+                    <include
+                        android:id="@+id/accountDetails"
+                        layout="@layout/item_product_details" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.amar.library.ui.StickyScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOrderDetailsBottomOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_orderDetails_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <include
+                    android:id="@+id/layoutOptions"
+                    layout="@layout/layout_options" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llOrderDetailsShipmentOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <include
+                    android:id="@+id/shipmentOptions"
+                    layout="@layout/item_shipment_options" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutOrderDetailsAcceptOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <include
+                    android:id="@+id/layoutButton"
+                    layout="@layout/layout_button" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCancelDispatch"
+                style="@style/Text.16sp.Primary.MontserratBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:background="@drawable/primary_round_border"
+                android:gravity="center"
+                android:paddingTop="@dimen/fifteenDp"
+                android:paddingBottom="@dimen/fifteenDp"
+                android:text="@string/cancelDispacth"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llRejectReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReasonTxt"
+                    style="@style/Text.14sp.BrightGray.poppins.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingTop="@dimen/twentyDp"
+                    android:paddingBottom="@dimen/twentyDp"
+                    android:text="@string/customerConfirmation"
+                    android:textAllCaps="true" />
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_orderDetails_manualAutoOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteenDp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/zeroDp"
+                app:cardElevation="@dimen/thirtyDp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/textViewOrderDetailsManualDispatch"
+                        style="@style/Text.16sp.White.MontserratBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/twentyDp"
+                        android:text="Manual Dispatch"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textViewOrderDetailsAutoDispatch"
+                        style="@style/Text.16sp.BlackShade.MontserratBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:padding="@dimen/twentyDp"
+                        android:text="Auto Dispatch"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayoutOrderDetailsBottomOptions">
+
+                <com.app.delivxstore.utility.Slider
+                    android:id="@+id/myseek"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:max="100"
+                    android:maxHeight="50dp"
+                    android:minHeight="25dp"
+                    android:progressDrawable="@drawable/ripple_picking_selector"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/selector_seekbar_btn"
+                    android:thumbOffset="-10dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_status_text"
+                    android:layout_width="@dimen/dpZero"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/readyForPickUp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/spThirteen"
+                    app:fontFamily="@font/montserrat_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cvOrderDetailsToolbar"
+            app:layout_constraintStart_toStartOf="@+id/cvOrderDetailsToolbar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/layoutLoader"
+            layout="@layout/layout_loader"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

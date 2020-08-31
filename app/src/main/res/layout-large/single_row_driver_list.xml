@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="8"
+        android:orientation="horizontal"
+        android:padding="@dimen/tenDp"
+        android:id="@+id/llMain"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <com.app.delivxstore.utility.CircleImageView
+                android:id="@+id/imageViewDriverRowDriverImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/profile" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="4"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/textViewDriverRowDriverName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp"
+                android:text="Prashant Kalagi"
+                android:fontFamily="@font/roboto_bold"
+                />
+
+            <TextView
+                android:id="@+id/textView_driverRow_driverMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:textColor="@color/xanadu"
+                android:text="+91-9738982701"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="@dimen/fourteenSp"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sixteenSp"
+                android:text="5"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_bold"
+                android:background="@drawable/rounded_green_text"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sixteenSp"
+                android:text="@string/assign"
+                android:gravity="center"
+                android:paddingTop="@dimen/tenDp"
+                android:paddingBottom="@dimen/tenDp"
+                android:paddingLeft="@dimen/sixteenDp"
+                android:paddingStart="@dimen/sixteenDp"
+                android:paddingRight="@dimen/sixteenDp"
+                android:paddingEnd="@dimen/sixteenDp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_bold"
+                android:background="@drawable/rectangle_corner_green_solid"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lobolly"
+        android:layout_below="@id/llMain"
+        />
+
+</RelativeLayout>

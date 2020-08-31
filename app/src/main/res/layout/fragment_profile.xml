@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zeroDp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpZero"
+            android:paddingBottom="@dimen/thirtyDp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNameHeader"
+                style="@style/ProfileHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textAppearance="@style/ProfileHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                style="@style/ProfileValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/ProfileValues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameHeader"
+                tools:text="Matthew McCoy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhoneHeader"
+                style="@style/ProfileHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phoneNumber"
+                android:textAppearance="@style/ProfileHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCountryCode"
+                style="@style/ProfileValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/ProfileValues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhoneHeader"
+                tools:text="+91" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpSeven"
+                android:layout_marginTop="@dimen/dpFour"
+                app:layout_constraintStart_toEndOf="@id/tvCountryCode"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhoneHeader"
+                app:srcCompat="@drawable/ic_arrow_drop_down" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhone"
+                style="@style/ProfileValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpSeven"
+                android:textAppearance="@style/ProfileValues"
+                app:layout_constraintStart_toEndOf="@id/ivDropDown"
+                app:layout_constraintTop_toBottomOf="@+id/tvPhoneHeader"
+                tools:text="8449845724" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStoreHeader"
+                style="@style/ProfileHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/storeName"
+                android:textAppearance="@style/ProfileHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStoreName"
+                style="@style/ProfileValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/ProfileValues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStoreHeader"
+                tools:text="Mint SuperMart" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStoreLocationHeader"
+                style="@style/ProfileHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/storeLocation"
+                android:textAppearance="@style/ProfileHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStoreLocation"
+                style="@style/ProfileValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/ProfileValues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStoreLocationHeader"
+                tools:text="Stamford,US" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRoleHeader"
+                style="@style/ProfileHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/role"
+                android:textAppearance="@style/ProfileHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreLocation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRole"
+                style="@style/ProfileValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/ProfileValues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRoleHeader"
+                tools:text="Dispatcher" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmailHeader"
+                style="@style/ProfileHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailAddress"
+                android:textAppearance="@style/ProfileHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRole" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmail"
+                style="@style/ProfileValues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dpTen"
+                android:drawableTint="@color/profileValue"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/ProfileValues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmailHeader"
+                tools:text="carolyn.oliver@mail.com" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPasswordHeader"
+                style="@style/ProfileHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textAppearance="@style/ProfileHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPassword"
+                style="@style/ProfileValues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:drawableTint="@color/profileValue"
+                android:gravity="start"
+                android:inputType="textPassword"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/ProfileValues"
+                app:drawableEndCompat="@drawable/ic_blue_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPasswordHeader"
+                tools:text="*********" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLogout"
+                style="@style/ProfileValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpTwenty"
+                android:paddingTop="@dimen/tenDp"
+                android:paddingBottom="@dimen/tenDp"
+                android:text="@string/logout"
+                android:textAppearance="@style/ProfileValues"
+                android:textColor="@color/logoutColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

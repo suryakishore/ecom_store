@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/historyBackGround"
+    android:paddingBottom="@dimen/dpThirtySeven"
+    tools:context="com.app.delivxstore.main.history.historydetails.HistoryDetailsActivity">
+
+    <include
+        android:id="@+id/includeActionBar"
+        layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpZero"
+        android:background="@color/white"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includeActionBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dpTwentyEight">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOrderIdHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpFifteen"
+                android:text="@string/historyOrderId"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMasterId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpThree"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOrderIdHead"
+                tools:text="31562217703" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOrderTypeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpFifteen"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:text="@string/historyOrderTimeType"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOrderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpThree"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOrderTypeTime"
+                tools:text="Jul 5, 10:00 am | Delivery" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalAmountHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpTwenty"
+                android:text="@string/historyTotalAmount"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMasterId" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpThree"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTotalAmountHead"
+                tools:text="$ 536.73 | Cash" />
+
+           <!-- <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDeliveryTimeHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpTwenty"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:text="@string/historyOrderDeliverTime"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderTime" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDeliveryTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpThree"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDeliveryTimeHeader"
+                tools:text="Jul 5, 10:00 am | Delivery" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCustomerNameHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpTwenty"
+                android:text="@string/allCustomerName"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpThree"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCustomerNameHeader"
+                tools:text="Sam Alexander" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dpTwelve"
+                android:layout_marginTop="@dimen/dpFifteen"
+                android:background="@color/historyBackGround"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerName" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHistoryItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpTwenty"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDeliveryAddressHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpTwentyOne"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/deliveryAddress"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                android:textSize="@dimen/spThirteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvHistoryItem" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCustomerName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpThree"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDeliveryAddressHeader"
+                tools:text="Sam Alexander" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDeliveryAddress"
+                android:layout_width="@dimen/dpOneNinety"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpThree"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCustomerName2"
+                tools:text="61281 Aaliyah Burg Suite 908, East Hilton furt, Pennsylvania 14233" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dpTwelve"
+                android:layout_marginTop="@dimen/dpFifteen"
+                android:background="@color/historyBackGround"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeliveryAddress" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupBillingAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="view6,tvBillingAddressHeader,
+                tvBillingAddress,tvBillingCustomerName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBillingAddressHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpTwentyOne"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/billingAddress"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                android:textSize="@dimen/spThirteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBillingCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpThree"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBillingAddressHeader"
+                tools:text="Sam Alexander" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBillingAddress"
+                android:layout_width="@dimen/dpOneNinety"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpThree"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBillingCustomerName"
+                tools:text="61281 Aaliyah Burg Suite 908, East Hilton furt, Pennsylvania 14233" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dpTwelve"
+                android:layout_marginTop="@dimen/dpFifteen"
+                android:background="@color/historyBackGround"
+                app:layout_constraintTop_toBottomOf="@+id/tvBillingAddress" />
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupPaymentBreakDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="view7,tvPaymentBreakDown,tvTotalBeforeTaxAmount,
+                               tvTotalBeforeTaxAmountHead,tvTaxes,tvShippingFee,
+                               view8,tvShippingHead,tvTotalAfterTax,tvTotalAfterTaxHead" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPaymentBreakDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpTwentyOne"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/paymentBreakDown"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                android:textSize="@dimen/spThirteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view7" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalBeforeTaxAmountHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpTwenty"
+                android:text="@string/totalBeforeTax"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPaymentBreakDown" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalBeforeTaxAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpTwenty"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPaymentBreakDown"
+                tools:text="$ 50.00" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTaxes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpFifteen"
+                android:text="@string/taxes"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalBeforeTaxAmountHead" />
+
+            <LinearLayout
+                android:id="@+id/llTaxDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginLeft="@dimen/dpFifteen"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:layout_marginRight="@dimen/dpFifteen"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaxes">
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShippingHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpTen"
+                android:text="@string/shippingFee"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llTaxDetails" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShippingFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpTen"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintBottom_toBottomOf="@+id/tvShippingHead"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvShippingHead"
+                tools:text="$ 5.00" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twoDp"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpSixteen"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:background="@drawable/drawable_dash_line"
+                app:layout_constraintTop_toBottomOf="@+id/tvShippingHead" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalAfterTaxHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpFifteen"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/totalAfterTax"
+                android:textAppearance="@style/HistoryDetailsViewValue"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalAfterTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpFifteen"
+                android:layout_marginEnd="@dimen/dpFifteen"
+                android:fontFamily="@font/montserrat_bold"
+                android:textAppearance="@style/HistoryDetailsViewHeader"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8"
+                tools:text="$ 54.00" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/pbHistoryDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

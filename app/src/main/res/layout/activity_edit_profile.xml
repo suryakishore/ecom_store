@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="includeActionBar,tilCurrentPassword,
+                                       tilConfirmNewPassword,tilNewPassword,btnConfirm" />
+
+    <include
+        android:id="@+id/includeActionBar"
+        layout="@layout/layout_action_bar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCurrentPassword"
+        style="@style/EditProfile.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpTwentyEight"
+        android:hint="@string/currentPassword"
+        app:hintTextAppearance="@style/EditProfile.TextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includeActionBar">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCurrentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:nextFocusForward="@+id/etLName"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNewPassword"
+        style="@style/EditProfile.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpTwentyEight"
+        android:hint="@string/newPassword"
+        app:hintTextAppearance="@style/EditProfile.TextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilCurrentPassword">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:nextFocusForward="@+id/etLName"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilConfirmNewPassword"
+        style="@style/EditProfile.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpTwentyEight"
+        android:hint="@string/confirmNewPassword"
+        app:hintTextAppearance="@style/EditProfile.TextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilNewPassword">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etConfirmNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:nextFocusForward="@+id/etLName"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpSixty"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:layout_marginTop="@dimen/dpThirty"
+        android:layout_marginEnd="@dimen/dpFifteen"
+        android:background="@drawable/drawable_edit_profile_ripple"
+        android:enabled="false"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/changePassword"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spSixteen"
+        app:layout_constraintTop_toBottomOf="@+id/tilConfirmNewPassword" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ivTickMark,tvSuccessMessage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTickMark"
+        android:layout_width="@dimen/dpHundred"
+        android:layout_height="@dimen/dpHundred"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dpFifity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/animated_check" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSuccessMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpTwenty"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/passwordChanged"
+        android:textAlignment="viewStart"
+        android:textColor="@color/noTrans"
+        android:textSize="@dimen/spSixteen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTickMark" />
+
+    <ProgressBar
+        android:id="@+id/pbEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

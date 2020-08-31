@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.ecomstore.printlabel.PrintLabelsActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/zeroDp"
+        android:paddingLeft="@dimen/zeroDp"
+        android:paddingEnd="@dimen/thirtyDp"
+        android:paddingRight="@dimen/thirtyDp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBagIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:contentDescription="@string/nav_header_desc"
+            android:src="@drawable/ic_bags"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBagId"
+            style="@style/Text.13sp.BlueZodiac.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fiveDp"
+            android:gravity="center"
+            android:text="#…3933"
+            app:layout_constraintEnd_toEndOf="@+id/ivBagIcon"
+            app:layout_constraintLeft_toLeftOf="@+id/ivBagIcon"
+            app:layout_constraintRight_toRightOf="@+id/ivBagIcon"
+            app:layout_constraintStart_toStartOf="@+id/ivBagIcon"
+            app:layout_constraintTop_toBottomOf="@+id/ivBagIcon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.ecomstore.printlabel.PrintLabelsActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.ecomstore.printlabel.PrintLabelViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOrderDetailsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/zeroDp"
+            app:cardElevation="@dimen/fiveDp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_toolbar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCustomerNameTxt"
+            style="@style/Text.14sp.BlueSmoke.MontserratRegular"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/twentyFiveDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:text="@string/orderDetails_customerName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvOrderDetailsToolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewOrderDetailsCustomerName"
+            style="@style/Text.13sp.BlueZodiac.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/fiveDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCustomerNameTxt"
+            tools:text="Sam Alexander" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            app:cardBackgroundColor="@color/historyOrderStatus"
+            app:cardCornerRadius="@dimen/twoDp"
+            app:cardElevation="@dimen/zeroDp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewOrderDetailsCustomerName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCustomerNameTxt">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Text.14sp.White.MontserratSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/fifteenDp"
+                android:paddingTop="@dimen/tenDp"
+                android:paddingEnd="@dimen/fifteenDp"
+                android:paddingBottom="@dimen/tenDp"
+                android:text=""
+                app:srcCompat="@drawable/ic_message_text" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/tenDp"
+            app:cardBackgroundColor="@color/historyOrderStatus"
+            app:cardCornerRadius="@dimen/twoDp"
+            app:cardElevation="@dimen/zeroDp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewOrderDetailsCustomerName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cvMessage"
+            app:layout_constraintRight_toLeftOf="@+id/cvMessage"
+            app:layout_constraintTop_toTopOf="@+id/tvCustomerNameTxt">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Text.14sp.White.MontserratSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/fifteenDp"
+                android:paddingTop="@dimen/tenDp"
+                android:paddingEnd="@dimen/fifteenDp"
+                android:paddingBottom="@dimen/tenDp"
+                android:text=""
+                app:srcCompat="@drawable/ic_phone" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBagIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/twentyFiveDp"
+            android:contentDescription="@string/nav_header_desc"
+            android:src="@drawable/ic_bags"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOrderDetailsCustomerName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBagsTxt"
+            style="@style/Text.12sp.DeepCove.MontserratBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:text="@string/bags"
+            android:textAllCaps="true"
+            app:layout_constraintLeft_toRightOf="@+id/ivBagIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivBagIcon"
+            app:layout_constraintTop_toTopOf="@+id/ivBagIcon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemPrice"
+            style="@style/Text.14sp.BlueSmoke.MontserratRegular"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginBottom="@dimen/tenDp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBagIcon"
+            app:layout_constraintLeft_toRightOf="@+id/ivBagIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivBagIcon"
+            tools:text="$ 44.35 | 3 Items" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiNoOfBags"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            android:hint="@string/noOfBags"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBagIcon">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etNoOfBags"
+                style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:inputType="number"
+                android:padding="@dimen/twentyDp"
+                android:theme="@style/EditText.Theme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clUploadReceipt"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/layoutButton"
+                layout="@layout/layout_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/colorRoman"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

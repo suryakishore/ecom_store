@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUpdateAisle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/tenDp"
+        android:paddingBottom="@dimen/tenDp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemUnAvailableProductName"
+            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginEnd="@dimen/fifteenDp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="5 kishore" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivItemSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:layout_marginRight="@dimen/twentyDp"
+            android:contentDescription="@string/nav_header_desc"
+            android:src="@drawable/ic_select_on"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tvItemUnAvailableProductName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvItemUnAvailableProductName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivItemUnAvailableProductImage"
+        android:layout_width="@dimen/sixtyDp"
+        android:layout_height="@dimen/sixtyDp"
+        android:layout_marginStart="@dimen/fifteenDp"
+        android:layout_marginTop="@dimen/fifteenDp"
+        android:contentDescription="@string/nav_header_desc"
+        android:src="@drawable/ic_default_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItemUnAvailableProductName"
+        style="@style/Text.14sp.BlackShade.MontserratMedium"
+        android:layout_width="@dimen/zeroDp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fifteenDp"
+        android:layout_marginEnd="@dimen/fifteenDp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivItemUnAvailableProductImage"
+        app:layout_constraintTop_toTopOf="@+id/ivItemUnAvailableProductImage"
+        tools:text="Beats Pro Over-Ear Headphones" />
+
+    <TextView
+        android:id="@+id/tvItemUnAvailableProductPrice"
+        style="@style/Text.14sp.BlackShade.MontserratMedium"
+        android:layout_width="@dimen/zeroDp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fifteenDp"
+        android:layout_marginTop="@dimen/fiveDp"
+        android:layout_marginEnd="@dimen/fifteenDp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivItemUnAvailableProductImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemUnAvailableProductName"
+        tools:text="$ 18.00" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewItemDetailsProductAttributesAddRmv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/ninetyDp"
+        android:paddingTop="@dimen/fiveDp"
+        android:paddingEnd="@dimen/fifteenDp"
+        android:paddingBottom="@dimen/fiveDp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivItemUnAvailableProductImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

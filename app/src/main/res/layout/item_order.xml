@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvOrderListMainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fiveDp"
+        android:elevation="@dimen/fiveDp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/fourDp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvOrderListOrderId"
+                style="@style/Text.11sp.white.MontserratSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:paddingTop="@dimen/fiveDp"
+                android:paddingBottom="@dimen/fiveDp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="12312323" />
+
+
+            <TextView
+                android:id="@+id/tvOrderListMemberName"
+                style="@style/Text.14sp.BlackShade.MontserratSemiBold"
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderListOrderId"
+                tools:text="Sam Alexander" />
+
+            <TextView
+                android:id="@+id/tvOrderListCategoryType"
+                style="@style/Text.12sp.Primary.MontserratMedium"
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderListMemberName"
+                tools:text="Ecom" />
+
+            <TextView
+                android:id="@+id/tvOrderListTotalPrice"
+                style="@style/Text.12sp.Grey.MontserratMedium"
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderListCategoryType"
+                tools:text="3 Products" />
+
+            <TextView
+                android:id="@+id/tvOrderListOrderTime"
+                style="@style/Text.12sp.Sirocc.MontserratRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:paddingBottom="@dimen/fiveDp"
+                android:textAlignment="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvOrderListOrderDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderListTotalPrice"
+                tools:ignore="RtlCompat"
+                tools:text="10:00 am" />
+
+            <TextView
+                android:id="@+id/tvOrderListOrderDate"
+                style="@style/Text.12sp.Sirocc.MontserratRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:paddingBottom="@dimen/fiveDp"
+                android:textAlignment="textEnd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderListTotalPrice"
+                tools:text="Jul 5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

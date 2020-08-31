@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <!--the shadow comes from here-->
+            <!--the shadow comes from here-->
+            <item android:bottom="@dimen/dpTen" android:drawable="@android:drawable/dialog_holo_light_frame" android:left="14dp" android:right="14dp" android:top="12dp">
+                <shape android:shape="rectangle">
+                    <stroke android:color="@color/accountDeleteButton" />
+                </shape>
+            </item>
+            <item android:bottom="@dimen/dpOne" android:left="@dimen/dpOne" android:right="@dimen/dpOne" android:top="@dimen/dpOne">
+                <shape android:shape="rectangle">
+                    <size android:width="@dimen/dpThreeThirty" android:height="@dimen/dpFiftyTwo" />
+                    <solid android:color="@color/white" />
+                    <corners android:radius="@dimen/dpOne" />
+                </shape>
+            </item>
+
+
+            <item android:bottom="@dimen/dpThree" android:left="@dimen/dpThree" android:right="@dimen/dpThree" android:top="@dimen/dpThree">
+
+                <!--whatever you want in the background, here i preferred solid white -->
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/white" />
+                    <size android:width="@dimen/dpThreeThirty" android:height="@dimen/dpFiftyTwo" />
+                    <stroke android:width="@dimen/dpTwo" android:color="@color/accountDeleteButton" />
+                    <corners android:radius="@dimen/dpOne" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+</selector>

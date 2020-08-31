@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTransType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:layout_marginTop="@dimen/dpThree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_credit" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="@dimen/ptOne"
+        android:layout_height="@dimen/dpNinetyThree"
+        android:layout_marginStart="@dimen/dpEighteen"
+        android:background="@color/viewBorder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTransType" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTransId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpSeventeen"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textColor="@color/transIdColor"
+        android:textSize="@dimen/spTwelve"
+        app:layout_constraintStart_toEndOf="@+id/ivTransType"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="#1234567890123" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTransType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpSeventeen"
+        android:layout_marginTop="@dimen/dpFive"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="start"
+        android:text="@string/walletRecharged"
+        android:textAlignment="viewStart"
+        android:textColor="@color/walletAmount"
+        android:textSize="@dimen/spFourteen"
+        app:layout_constraintStart_toEndOf="@+id/ivTransType"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransId" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTransAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpSeventeen"
+        android:layout_marginTop="@dimen/dpTen"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textColor="@color/walletAmount"
+        android:textSize="@dimen/spFourteen"
+        app:layout_constraintStart_toEndOf="@+id/ivTransType"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransType"
+        tools:text="$20.00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTransTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpFive"
+        android:layout_marginEnd="@dimen/dpFive"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textColor="@color/transTimeColor"
+        android:textSize="@dimen/spTwelve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransType"
+        tools:text="28 Nov 19, 13 : 17 : 22" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dpTwenty"
+        android:layout_marginStart="@dimen/dpTwentyFive"
+        android:layout_marginTop="@dimen/dpTen"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransAmount" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

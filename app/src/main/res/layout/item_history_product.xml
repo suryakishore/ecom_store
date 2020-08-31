@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivItem"
+            android:layout_width="@dimen/dpSixty"
+            android:layout_height="@dimen/dpSixty"
+            android:layout_marginStart="@dimen/dpFifteen"
+            android:layout_marginTop="@dimen/dpFifteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemName"
+            style="@style/HistoryDetailsViewValue"
+            android:layout_width="@dimen/dpZero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpFifteen"
+            android:layout_marginTop="@dimen/dpFifteen"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toStartOf="@+id/tvItemPrice"
+            app:layout_constraintLeft_toRightOf="@+id/ivItem"
+            app:layout_constraintRight_toLeftOf="@+id/tvItemPrice"
+            app:layout_constraintStart_toEndOf="@+id/ivItem"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Surf Excel MaticFront Load Detergent Powder" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemPrice"
+            style="@style/HistoryDetailsViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpFifteen"
+            android:layout_marginEnd="@dimen/dpFifteen"
+            android:includeFontPadding="false"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="$3684.00" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvFirstAttribute,tvFirstAttributeValue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpFifteen"
+            android:layout_marginTop="@dimen/dpThree"
+            android:text="@string/qty"
+            android:textAppearance="@style/HistoryDetailsViewHeader"
+            app:layout_constraintStart_toEndOf="@+id/ivItem"
+            app:layout_constraintTop_toBottomOf="@id/tvItemName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQtyValue"
+            style="@style/HistoryDetailsViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwo"
+            android:layout_marginTop="@dimen/dpThree"
+            android:textSize="@dimen/spThirteen"
+            app:layout_constraintStart_toEndOf="@+id/tvQty"
+            app:layout_constraintTop_toBottomOf="@id/tvItemName"
+            tools:text="03 x $ 12.00 / Pcs" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFirstAttribute"
+            style="@style/HistoryDetailsViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpFifteen"
+            android:layout_marginTop="@dimen/dpTen"
+            android:text="@string/size"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/ivItem"
+            app:layout_constraintTop_toBottomOf="@id/tvQty" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFirstAttributeValue"
+            style="@style/HistoryDetailsViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwo"
+            android:layout_marginTop="@dimen/dpTen"
+            android:textSize="@dimen/spThirteen"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/tvFirstAttribute"
+            app:layout_constraintTop_toBottomOf="@id/tvQty"
+            tools:text="200 ml" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvSecondAttribute,tvSecondAttributeValue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSecondAttribute"
+            style="@style/HistoryDetailsViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpThree"
+            android:layout_marginTop="@dimen/dpTen"
+            android:text="@string/flavour"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/tvFirstAttributeValue"
+            app:layout_constraintTop_toBottomOf="@id/tvQty" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSecondAttributeValue"
+            style="@style/HistoryDetailsViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwo"
+            android:layout_marginTop="@dimen/dpTen"
+            android:textSize="@dimen/spThirteen"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/tvSecondAttribute"
+            app:layout_constraintTop_toBottomOf="@id/tvQty"
+            tools:text="Mixed Fruit" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvViewMore"
+            style="@style/HistoryDetailsViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpFifteen"
+            android:layout_marginTop="@dimen/dpThree"
+            android:text="@string/viewMore"
+            android:textColor="@color/viewMore"
+            android:textSize="@dimen/spThirteen"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/ivItem"
+            app:layout_constraintTop_toBottomOf="@id/tvFirstAttribute" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dpFifteen"
+            android:background="@drawable/drawable_load_more"
+            android:padding="@dimen/dpTen"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvQtyValue"
+            app:srcCompat="@drawable/ic_load_more" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

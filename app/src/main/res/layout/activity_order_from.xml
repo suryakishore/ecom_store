@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.orderFrom.OrderFromActivity">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_above="@+id/btnCreateOrder"
+            >
+
+            <RelativeLayout
+                android:id="@+id/llActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBackBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:layout_marginLeft="@dimen/tenDp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_back_btn"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/orderForm"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/eighteenSp" />
+
+            </RelativeLayout>
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whisper"
+                    android:padding="@dimen/fifteenDp"
+                    android:text="@string/findCustomer"
+                    android:textAllCaps="true"
+                    android:textColor="@color/portGore"
+                    android:textSize="@dimen/twelveSp"
+                    app:fontFamily="@font/roboto_bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/llFindCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/tenDp"
+                    android:paddingBottom="@dimen/tenDp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvAddCustomer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.7"
+                        android:padding="@dimen/fifteenDp"
+                        android:text="@string/chooseOrAddCustomer"
+                        android:textAllCaps="false"
+                        android:textColor="@color/lightWhite"
+                        android:textSize="@dimen/twelveSp"
+                        app:fontFamily="@font/robotoregular" />
+
+                    <LinearLayout
+                        android:id="@+id/llCustomerDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fifteenDp"
+                        android:layout_marginLeft="@dimen/fifteenDp"
+                        android:layout_weight="1.7"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvCustomerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sixteenSp"
+                            app:fontFamily="@font/roboto_bold" />
+
+                        <TextView
+                            android:id="@+id/tvMail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:layout_marginTop="@dimen/fiveDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cement"
+                            android:textSize="@dimen/twelveSp"
+                            app:fontFamily="@font/robotoregular" />
+
+                        <TextView
+                            android:id="@+id/tvNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:layout_marginTop="@dimen/twoDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cement"
+                            android:textSize="@dimen/twelveSp"
+                            app:fontFamily="@font/robotoregular" />
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/arrow_right"
+                        android:tint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whisper"
+                    android:padding="@dimen/fifteenDp"
+                    android:text="@string/pickUpAdd"
+                    android:textAllCaps="true"
+                    android:textColor="@color/portGore"
+                    android:textSize="@dimen/twelveSp"
+                    app:fontFamily="@font/roboto_bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/llPickupAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/tenDp"
+                    android:paddingBottom="@dimen/tenDp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvChoosePicLoc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.7"
+                        android:padding="@dimen/fifteenDp"
+                        android:text="@string/choosePickUp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/lightWhite"
+                        android:textSize="@dimen/twelveSp"
+                        app:fontFamily="@font/robotoregular" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llPickupAddDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fifteenDp"
+                        android:layout_marginLeft="@dimen/fifteenDp"
+                        android:layout_weight="1.7"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvTaggedAs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sixteenSp"
+                            app:fontFamily="@font/roboto_bold" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:layout_marginTop="@dimen/fiveDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cement"
+                            android:textSize="@dimen/twelveSp"
+                            app:fontFamily="@font/robotoregular" />
+
+                        <TextView
+                            android:id="@+id/tvlandMark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:layout_marginTop="@dimen/twoDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cement"
+                            android:textSize="@dimen/twelveSp"
+                            app:fontFamily="@font/robotoregular" />
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/arrow_right"
+                        android:tint="@color/colorPrimary" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whisper"
+                    android:padding="@dimen/fifteenDp"
+                    android:text="@string/deliAdd"
+                    android:textAllCaps="true"
+                    android:textColor="@color/portGore"
+                    android:textSize="@dimen/twelveSp"
+                    app:fontFamily="@font/roboto_bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/llDelAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/tenDp"
+                    android:paddingBottom="@dimen/tenDp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvChooseDelLoc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.7"
+                        android:padding="@dimen/fifteenDp"
+                        android:text="@string/choosedeliLoc"
+                        android:textAllCaps="false"
+                        android:textColor="@color/lightWhite"
+                        android:textSize="@dimen/twelveSp"
+                        app:fontFamily="@font/robotoregular" />
+
+                    <LinearLayout
+                        android:id="@+id/llDelAddDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fifteenDp"
+                        android:layout_marginLeft="@dimen/fifteenDp"
+                        android:layout_weight="1.7"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvDelTaggedAs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sixteenSp"
+                            app:fontFamily="@font/roboto_bold" />
+
+                        <TextView
+                            android:id="@+id/tvDelAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:layout_marginTop="@dimen/fiveDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cement"
+                            android:textSize="@dimen/twelveSp"
+                            app:fontFamily="@font/robotoregular" />
+
+                        <TextView
+                            android:id="@+id/tvDellandMark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fiveDp"
+                            android:layout_marginLeft="@dimen/fiveDp"
+                            android:layout_marginTop="@dimen/twoDp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cement"
+                            android:textSize="@dimen/twelveSp"
+                            app:fontFamily="@font/robotoregular" />
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/arrow_right"
+                        android:tint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whisper"
+                    android:padding="@dimen/fifteenDp"
+                    android:text="@string/delType"
+                    android:textAllCaps="true"
+                    android:textColor="@color/portGore"
+                    android:textSize="@dimen/twelveSp"
+                    app:fontFamily="@font/roboto_bold" />
+
+                <RelativeLayout
+                    android:id="@+id/nowRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/twentyDp"
+                    android:paddingBottom="@dimen/twentyDp">
+
+                    <ImageView
+                        android:id="@+id/tickNowIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/twentyDp"
+                        android:layout_marginLeft="@dimen/twentyDp"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_check_icon_on" />
+
+                    <TextView
+                        android:id="@+id/nowTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:layout_marginLeft="@dimen/tenDp"
+                        android:layout_toEndOf="@+id/tickNowIv"
+                        android:layout_toRightOf="@+id/tickNowIv"
+                        android:text="@string/now"
+                        android:textColor="@color/manatee"
+                        android:textSize="@dimen/fifteenSp"
+                        app:fontFamily="@font/roboto_bold" />
+
+                    <TextView
+                        android:id="@+id/nowDesTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nowTv"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:layout_marginLeft="@dimen/tenDp"
+                        android:layout_marginTop="@dimen/tenDp"
+                        android:layout_marginEnd="@dimen/twentyDp"
+                        android:layout_marginRight="@dimen/twentyDp"
+                        android:layout_toEndOf="@+id/tickNowIv"
+                        android:layout_toRightOf="@+id/tickNowIv"
+                        android:text="@string/nowOrderDescription"
+                        android:textColor="@color/silver"
+                        android:textSize="@dimen/twelveSp"
+                        app:fontFamily="@font/robotoregular" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oneDp"
+                    android:layout_marginStart="@dimen/thirtyDp"
+                    android:layout_marginLeft="@dimen/thirtyDp"
+                    android:layout_marginEnd="@dimen/thirtyDp"
+                    android:layout_marginRight="@dimen/thirtyDp"
+                    android:background="@color/portGore" />
+
+                <RelativeLayout
+                    android:id="@+id/scheduleRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/twentyDp"
+                    android:paddingBottom="@dimen/twentyDp">
+
+                    <ImageView
+                        android:id="@+id/tickIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/twentyDp"
+                        android:layout_marginLeft="@dimen/twentyDp"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_check_off" />
+
+                    <TextView
+                        android:id="@+id/scheduleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:layout_marginLeft="@dimen/tenDp"
+                        android:layout_toEndOf="@+id/tickIv"
+                        android:layout_toRightOf="@+id/tickIv"
+                        android:text="@string/schedule"
+                        android:textColor="@color/manatee"
+                        android:textSize="@dimen/fifteenSp"
+                        app:fontFamily="@font/roboto_bold" />
+
+                    <TextView
+                        android:id="@+id/scheduleDesTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/scheduleTv"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:layout_marginLeft="@dimen/tenDp"
+                        android:layout_marginTop="@dimen/tenDp"
+                        android:layout_marginEnd="@dimen/twentyDp"
+                        android:layout_marginRight="@dimen/twentyDp"
+                        android:layout_toEndOf="@+id/tickIv"
+                        android:layout_toRightOf="@+id/tickIv"
+                        android:text="@string/scheduleOrderDesc"
+                        android:textColor="@color/silverChalice"
+                        android:textSize="@dimen/twelveSp"
+                        app:fontFamily="@font/robotoregular" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dateAndTimeRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/thirtyDp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/tickImgIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/twentyDp"
+                        android:layout_marginLeft="@dimen/twentyDp"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/ic_check_icon_off" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:layout_marginLeft="@dimen/tenDp"
+                        android:layout_toEndOf="@+id/tickImgIv"
+                        android:layout_toRightOf="@+id/tickImgIv">
+
+                        <LinearLayout
+                            android:id="@+id/dateLl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/selectDate"
+                                android:textColor="@color/manatee"
+                                android:textSize="@dimen/twelveSp"
+                                app:fontFamily="@font/roboto_bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/fiveDp"
+                                android:layout_marginEnd="@dimen/twentyDp"
+                                android:layout_marginRight="@dimen/twentyDp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/dateTv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/portGore"
+                                    android:textSize="@dimen/twelveSp"
+                                    app:fontFamily="@font/roboto_bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:contentDescription="@string/app_name"
+                                    app:srcCompat="@drawable/ic_calendar_icon" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/slotLl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dateLl"
+                            android:layout_marginTop="@dimen/twentyDp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/selectSlotTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/selectSlot"
+                                android:textColor="@color/manatee"
+                                android:textSize="@dimen/twelveSp"
+                                app:fontFamily="@font/roboto_bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/tenDp"
+                                android:layout_marginEnd="@dimen/twentyDp"
+                                android:layout_marginRight="@dimen/twentyDp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/timeTv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/portGore"
+                                    android:textSize="@dimen/twelveSp"
+                                    app:fontFamily="@font/roboto_bold" />
+
+                                <ImageView
+                                    android:id="@+id/arrowIv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/app_name"
+                                    android:tint="@color/colorMirage"
+                                    app:srcCompat="@drawable/arrow_right" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnCreateOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/twentyDp"
+        android:background="@drawable/rectangle_solid_green_corner"
+        android:gravity="center"
+        android:padding="@dimen/tenDp"
+        android:text="@string/create_order"
+        android:textColor="@color/white"
+        android:textSize="@dimen/eighteenSp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,797 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="CustomTabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@color/colorPrimary</item>
+        <item name="tabIndicatorColor">@color/gray</item>
+        <item name="tabTextAppearance">@style/CustomTabTexStyle</item>
+    </style>
+
+    <style name="CustomTabTexStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="dialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <!--  <item name="android:windowFullscreen">true</item>
+          <item name="android:windowContentOverlay">@null</item>-->
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/blackShade</item>
+        <item name="colorControlActivated">@color/blackShade</item>
+        <item name="colorControlHighlight">@color/blackShade</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="styleHint">
+        <item name="android:textSize">@dimen/eighteenSp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="styleDrawer">
+        <item name="iconTint">@color/black</item>
+        <item name="android:textSize">@dimen/spFifteen</item>
+        <item name="itemTextColor">@color/blackShade</item>
+        <item name="android:layout_marginBottom">@dimen/fiveDp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Autocomplete">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TabTextStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabTextAppearance">@style/RegularText</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="RegularText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TextInputLayoutStyle">
+        <item name="boxCornerRadiusBottomEnd">@dimen/fourDp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/fourDp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/fourDp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/fourDp</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="android:textColorHint">@color/border</item>
+        <item name="android:textColorHighlight">@color/border</item>
+        <item name="boxStrokeColor">@color/border</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/round_bg</item>
+    </style>
+
+    <style name="Text.24sp.BlueZodiac.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/spTwentyFour</item>
+    </style>
+
+
+    <style name="Text.13sp.Primary.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+    </style>
+
+    <style name="Text.16sp.White.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text.16sp.BlackShade.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text.14sp.BlackShade.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/fourteenSp</item>
+    </style>
+
+
+    <style name="Text.16sp.BlackShade.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+    </style>
+
+    <style name="Text.18sp.Gray.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:textSize">@dimen/eighteenSp</item>
+    </style>
+
+    <style name="Text.14sp.Gray.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:textSize">@dimen/fourteenSp</item>
+    </style>
+
+    <style name="Text.16sp.BlackShade.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+    </style>
+
+    <style name="Text.16sp.Primary.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+    </style>
+
+    <style name="Text.16sp.Primary.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+    </style>
+
+    <style name="Text.12sp.BlueZodiac.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/allBlack</item>
+        <item name="android:textSize">@dimen/twelveSp</item>
+    </style>
+
+    <style name="Text.16sp.BlueZodiac.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/allBlack</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+    </style>
+
+
+    <style name="Text.14sp.BlueZodiac.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/fourteenSp</item>
+    </style>
+
+
+    <style name="Text.12sp.bankCode.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:textSize">@dimen/twelveSp</item>
+    </style>
+
+    <style name="Text.14sp.BlueSmoke.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:textSize">@dimen/fourteenSp</item>
+    </style>
+
+    <style name="Text.16sp.BlueSmoke.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+    </style>
+
+    <style name="Text.14sp.BlueSmoke.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:textSize">@dimen/fourteenSp</item>
+    </style>
+
+    <style name="Text.18sp.BlackShade.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/eighteenSp</item>
+    </style>
+
+    <style name="Text.18sp.BlackShade.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/eighteenSp</item>
+    </style>
+
+    <style name="Text.18sp.White.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/eighteenSp</item>
+    </style>
+
+    <style name="Text.15sp.BlueZodiac.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fifteenSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.13sp.BlueZodiac.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.20sp.BlackShade.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.13sp.Grey.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Text.13sp.Grey.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.13sp.BlackShade.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Text.13sp.BlackShade.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.12sp.BlackShade.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/colorDCodGray</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.12sp.corn.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/colorCorn</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.14sp.BlackShade.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/colorDCodGray</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+
+    <style name="Text.20sp.Lime.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textColor">@color/lime</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.13sp.BlackShade.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.17sp.BlackShade.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/seventeenSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.12sp.Border.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+
+    <style name="Text.15sp.BlackShade.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fifteenSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.25sp.BlackShade.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twentyFiveSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+
+    <style name="Text.12sp.BlackShade.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.14sp.BlackShade.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.14sp.SilverChalice.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/silverChalice</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.13sp.BlueDash.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/colorBlueZodiac</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.14sp.BlueZodiac.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.15sp.BlueZodiac.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fifteenSp</item>
+        <item name="android:textColor">@color/colorBlueZodiac</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.12sp.BlueZodiac.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.15sp.Primary.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fifteenSp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.14sp.Primary.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.12sp.White.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.14sp.White.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.12sp.selectedAccount.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/selectedAccount</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+
+    <style name="Text.13sp.Shark.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/shark</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.16sp.Shark.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/sixteenSp</item>
+        <item name="android:textColor">@color/shark</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.14sp.Shark.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/shark</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Text.14sp.Shark.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/shark</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.13sp.Shark.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/shark</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.13sp.BlueZodiac.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.20sp.BlueZodiac.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.20sp.BlueZodiac.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Text.20sp.White.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.13sp.BlackShade.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.11sp.white.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/spEleven</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.12sp.white.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.12sp.Sirocc.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/sirocc</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Text.14sp.BlackShade.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.14sp.Black.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.15sp.Black.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fifteenSp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.13sp.Black.MontserratRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Text.12sp.Grey.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.12sp.Primary.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.10sp.Primary.MontserratReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+
+    <style name="Text.14sp.Primary.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.20sp.Primary.MontserratExtraBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_extra_bold</item>
+    </style>
+
+    <style name="Text.20sp.Primary.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+
+    <style name="Text.17sp.BrightGray.poppins.Bold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColor">@color/historyOrderId</item>
+        <item name="android:textSize">@dimen/seventeenSp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+
+    </style>
+
+    <style name="Text.14sp.BrightGray.poppins.Bold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColor">@color/historyOrderId</item>
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.12sp.BrightGray.poppins.Bold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColor">@color/blueApprox</item>
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="loginTabDesign" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="EditText.Theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/blackShade</item>
+        <item name="colorControlActivated">@color/blackShade</item>
+        <item name="colorControlHighlight">@color/blackShade</item>
+    </style>
+
+    <style name="Stripe.TextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Customize your theme here. -->
+        <item name="boxCornerRadiusBottomEnd">@dimen/fourDp</item>
+        <item name="android:textColor">@color/noTransMessage</item>
+        <item name="android:textSize">@dimen/spFourteen</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <!--BankAccount fragment-->
+    <style name="BankAccountEditText">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/spFifteen</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <!--Stripe fragment-->
+    <style name="StripeAccountEditText">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/spTwenty</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="HistoryDetailsViewHeader" parent="ThemeOverlay.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/historyOrderIdHead</item>
+        <item name="android:textSize">@dimen/spThirteen</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="HistoryDetailsViewValue" parent="ThemeOverlay.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/historyOrderId</item>
+        <item name="android:textSize">@dimen/spFifteen</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="borderlessButtonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+    </style>
+
+    <style name="TransactionBottomSheet">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/invoiceColor</item>
+        <item name="android:textSize">@dimen/spSixteen</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_marginStart">@dimen/dpTwenty</item>
+        <item name="android:layout_marginTop">@dimen/dpTwentyFive</item>
+        <item name="android:layout_marginEnd">@dimen/dpTwelve</item>
+        <item name="drawableTint">@color/invoiceColor</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <style name="ProfileHeader">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/profileHeader</item>
+        <item name="android:textSize">@dimen/spThirteen</item>
+        <item name="android:textAlignment">center</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:layout_marginStart">@dimen/dpFifteen</item>
+        <item name="android:layout_marginTop">@dimen/dpThirty</item>
+    </style>
+
+    <style name="ProfileValues">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/profileValue</item>
+        <item name="android:textSize">@dimen/spThirteen</item>
+        <item name="android:textAlignment">center</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:layout_marginStart">@dimen/dpFifteen</item>
+        <item name="android:layout_marginTop">@dimen/dpFive</item>
+    </style>
+
+    <style name="EditProfile.TextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Customize your theme here. -->
+        <item name="boxCornerRadiusBottomEnd">@dimen/fourDp</item>
+        <item name="android:textColor">@color/border</item>
+        <item name="android:textSize">@dimen/spTwelve</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="passwordToggleEnabled">true</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:layout_marginStart">@dimen/dpFifteen</item>
+        <item name="android:layout_marginEnd">@dimen/dpFifteen</item>
+    </style>
+
+    <dimen name="seventeenSp">17sp</dimen>
+
+    <style name="Text.12sp.BrightGrey.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+        <item name="android:textColor">@color/walletRecentTrans</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.12sp.sanMarino.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/colorSanMarino</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.14sp.sanMarino.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/fourteenSp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.12sp.invoice.MontserratMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/invoiceColor</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Text.13sp.ApproxBlack.poppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/blackApprox</item>
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+    </style>
+
+    <style name="Text.10sp.DimGray.poppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_light</item>
+        <item name="android:textColor">@color/colorProductDimGray</item>
+        <item name="android:textSize">@dimen/spTen</item>
+    </style>
+
+    <style name="Text.13sp.White.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.White.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/twelveSp</item>
+    </style>
+
+    <style name="Text.15sp.White.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/fifteenSp</item>
+    </style>
+
+    <style name="Text.22sp.White.PoppinsBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="Text.12sp.DeepCove.MontserratBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/colorDeepCove</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Text.16sp.Nero.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+    </style>
+
+    <style name="Text.16sp.Nero.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/sixteenSp</item>
+    </style>
+
+    <style name="Text.12sp.Nero.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/twelveSp</item>
+    </style>
+
+    <style name="Text.13sp.Nero.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/thirteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.sanMarino.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/colorRed</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="Text.12sp.WistFul.MontserratReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/colorWistful</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Text.12sp.BlueZodiac.MontserratSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textSize">@dimen/twelveSp</item>
+        <item name="android:textColor">@color/historyOrderStatus</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+</resources>

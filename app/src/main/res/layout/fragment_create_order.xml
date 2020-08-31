@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main.createOrder.CreateOrderFragment"
+    >
+
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:textAllCaps="false"
+      android:textSize="12sp"
+      android:fontFamily="@font/roboto_medium"
+      android:textColor="@color/white"
+      android:text="@string/send_anything"
+      android:id="@+id/btnSendAnything"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:background="@color/colorPrimary"
+      android:layout_marginTop="30dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <androidx.appcompat.widget.AppCompatButton
+      android:textAllCaps="false"
+      android:textSize="12sp"
+      android:fontFamily="@font/roboto_medium"
+      android:textColor="@color/white"
+      android:text="@string/order_anything"
+      android:id="@+id/btnOrderAnything"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:background="@color/colorPrimary"
+      android:layout_marginTop="30dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnSendAnything"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <androidx.appcompat.widget.AppCompatButton
+      android:textAllCaps="false"
+      android:textSize="12sp"
+      android:fontFamily="@font/roboto_medium"
+      android:textColor="@color/white"
+      android:text="@string/menu_order"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:background="@color/colorPrimary"
+      android:layout_marginTop="30dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnOrderAnything"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/ivBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_btn" />
+
+        <TextView
+            android:id="@+id/tvOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/tenDp"
+            android:layout_marginLeft="@dimen/tenDp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="start|center_vertical"
+            android:text="@string/orderID"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sixteenSp"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/tvOrderIdVal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/tenDp"
+            android:layout_marginLeft="@dimen/tenDp"
+            android:layout_weight="6"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="start|center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sixteenSp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/tenDp"
+            android:src="@drawable/printer_icon" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_marginRight="@dimen/tenDp"
+                    android:layout_weight="1.8"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="start"
+                    android:text="@string/allCustomerName"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+                <TextView
+                    android:id="@+id/tvCustomerName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="end"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:background="@color/fogWhite" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_marginRight="@dimen/tenDp"
+                    android:layout_weight="1.8"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="start"
+                    android:text="@string/orderType"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+                <TextView
+                    android:id="@+id/tvOrderType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="end"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:background="@color/fogWhite" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="start"
+                android:text="@string/orderDetails"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+
+
+            <include
+                layout="@layout/item_product_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twentyDp"
+
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:background="@color/fogWhite" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_marginRight="@dimen/tenDp"
+                    android:layout_weight="1.8"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="start"
+                    android:text="@string/status"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+                <TextView
+                    android:id="@+id/tvOrderStatusName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="end"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:background="@color/fogWhite" />
+
+
+            <LinearLayout
+                android:id="@+id/llDeliveredBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_marginRight="@dimen/tenDp"
+                    android:layout_weight="1.8"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="start"
+                    android:text="@string/deliveredBy"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+                <TextView
+                    android:id="@+id/tvDeliveredBy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="end"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewDel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:background="@color/fogWhite" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginLeft="@dimen/tenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginRight="@dimen/tenDp"
+                android:layout_marginBottom="@dimen/twentyDp"
+
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_marginRight="@dimen/tenDp"
+                    android:layout_weight="1.8"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="start"
+                    android:text="@string/storeEarning"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+                <TextView
+                    android:id="@+id/tvStoreEar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="end"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/shark"
+                    android:textSize="@dimen/sixteenSp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E46D47</color>
+    <color name="colorPrimaryDark">#E46D47</color>
+    <color name="colorAccent">#E46D47</color>
+    <color name="colorPrimaryLight">#EA7D5B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_white">#96FFFFFF</color>
+    <color name="fogWhite">#F5F5F5</color>
+    <color name="gray">#DEDEDE</color>
+    <color name="grayback">#f2f2f2</color>
+    <color name="grayLightTextColor">#939090</color>
+    <color name="colord6d6d6">#d6d6d6</color>
+    <color name="red_light">#f4666a</color>
+    <color name="light_color">#f9f9f9</color>
+    <color name="shadow">#FBFBFB</color>
+    <color name="grayTextColor">#ff444444</color>
+    <color name="order_bkgrnd">#fafafa</color>
+    <color name="shiping_text_color">#6f6f6f</color>
+    <color name="white_smoke">#F5F5F5</color>
+    <color name="gunsmoke">#8D8F8E</color>
+    <color name="lig_green2">#8d8f8e</color>
+    <color name="color_sup_txt">#3b3b3b</color>
+    <color name="background">#fafafa</color>
+    <color name="divider1">#dedede</color>
+    <color name="light_gray">#66DEDEDE</color>
+    <color name="darkGray">#aaa</color>
+    <color name="colorBlueZodiac">#0C5260</color>
+    <color name="blackShade">#3D4152</color>
+    <color name="lightGray">#DDDDDD</color>
+    <color name="shark">#222224</color>
+    <color name="silverChalice">#AFAFAF</color>
+    <color name="tandura">#484848</color>
+    <color name="grayShade">#EAEAEA</color>
+    <color name="grendiar">#CD3301</color>
+    <color name="sunGlow">#FFBB00</color>
+    <color name="sirocc">#707475</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="lime">#29A225</color>
+    <color name="greenHaze">#009865</color>
+    <color name="transperent">#00000000</color>
+    <color name="lobolly">#C9D2D9</color>
+    <color name="xanadu">#242A4B</color>
+    <color name="OuterSpace">#000</color>
+    <color name="blue">#242A4B</color>
+    <color name="darkBlue">#4479a1</color>
+    <color name="portGore">#242A4B</color>
+    <color name="divider2">#c9cbcd</color>
+    <color name="key_lime_lie">#C0BE1D</color>
+    <color name="smokewhite">#F5F5F5</color>
+    <color name="lightBlack">#282828</color>
+    <color name="lightBlackText">#585858</color>
+    <color name="black">#000000</color>
+    <color name="whisper">#EFF0F7</color>
+    <color name="lightWhite">#C1C1C1</color>
+    <color name="viewColor">#E3E6EF</color>
+    <color name="cement">#858AA8</color>
+    <color name="border">#7E808C</color>
+    <color name="colorPictonBlue">#4695E6</color>
+    <color name="colorRoman">#D95656</color>
+    <color name="colorwildsand">#f5f5f5</color>
+    <color name="colorCharade">#2F2E3A</color>
+    <color name="colorBoulder">#747474</color>
+    <color name="colorPortGore">#1A1945</color>
+    <color name="colorGhost">#BFC5CF</color>
+    <color name="waterloo">#7B8091</color>
+    <color name="colorSilverChalice">#ACACAC</color>
+    <color name="colorMirage">#1A192F</color>
+    <color name="colorDoveGray">#6B6B6B</color>
+    <color name="manatee">#858AA8</color>
+    <color name="silver">#C1C1C1</color>
+    <color name="dodgerBlue">#3197FD</color>
+    <color name="colourLightCement">#858B92</color>
+    <color name="colorOsloGray">#000000</color>
+    <color name="colorLightBlue">#839FCC</color>
+    <color name="whiteLight">#F8F8F8</color>
+
+    <!--Wallet-->
+    <color name="walletAmount">#484848</color>
+    <color name="viewBorder">#F0F0F0</color>
+    <color name="walletRecentTrans">#3D4152</color>
+    <color name="noTrans">#4A3B3B</color>
+    <color name="transactions">#E46D47</color>
+    <color name="transIdColor">#777777</color>
+    <color name="transTimeColor">#B7B7B7</color>
+    <color name="transViewColor">#D3E2EF</color>
+    <color name="noTransMessage">#9A9A9A</color>
+    <color name="actionBarTitle">#3D4152</color>
+    <color name="transparent">#00000000</color>
+    <color name="withDrawBackground">#F4F4F4</color>
+    <color name="walletSelectWithDrawMethod">#A7A6A2</color>
+    <color name="allBlack">#333333</color>
+    <color name="blackApprox">#040404</color>
+
+    <!--StripAccount Fragment-->
+    <color name="stripImageCard">#E0E0E0</color>
+    <color name="stripImageBackground">#E0E0E0</color>
+
+    <!--AccountListFragment-->
+    <color name="stripBackground">#F4F4F4</color>
+    <color name="unverified">#DB1919</color>
+    <color name="arrowTint">#484848</color>
+    <color name="addCardBorder">#3A4FDB</color>
+    <color name="bankDetailsHeader">#7E808C</color>
+    <color name="accountDeleteButton">#E46D47</color>
+    <color name="dustGray">#FF1081C2</color>
+    <color name="divider">#FFDDDDDD</color>
+    <color name="alertTitleBackground">#FFDDDDDD</color>
+    <color name="denim">#FF444444</color>
+    <color name="bankCode">#A8A8A8</color>
+    <color name="verified">#01C93E</color>
+
+    <!--Withdraw Fragment-->
+    <color name="selectedAccount">#A7A6A2</color>
+    <color name="changeCard">#3897F0</color>
+    <color name="accountNumber">#484848</color>
+    <color name="viewBorderColor">#F4F4F4</color>
+    <color name="rechargeAmount">#464646</color>
+    <color name="bankCodeColor">#969DB9</color>
+    <color name="withDrawFeeColor">#D01818</color>
+
+    <!--HistoryFragment-->
+    <color name="historyOrderId">#3D4152</color>
+    <color name="historyOrderStatus">#13AD3C</color>
+    <color name="historyBackGround">#F8F8F8</color>
+    <color name="historyOrderIdHead">#7E808C</color>
+    <color name="invoiceColor">#2A5CE3</color>
+    <color name="historyStatus">#29A225</color>
+    <color name="gstColor">#7E808C</color>
+    <color name="viewMore">#E46D47</color>
+    <color name="cancelColor">#E44747</color>
+
+
+    <!--Notification-->
+    <color name="notificationTime">#A7A6A2</color>
+    <color name="notificationView">#EDEDED</color>
+
+    <!--Profile-->
+    <color name="profileHeader">#7E808C</color>
+    <color name="profileValue">#3D4152</color>
+    <color name="logoutColor">#E46D47</color>
+    <color name="pippin">#FFE9E2</color>
+    <color name="aluminium">#A9AAB1</color>
+    <color name="blueApprox">#0326FA</color>
+    <color name="colorightWhite">#D5D5D5</color>
+    <color name="colorSanMarino">#445F9B</color>
+    <color name="colorWildSand">#F6F6F6</color>
+    <color name="colorRazzm">#DB0779</color>
+    <color name="colorNiagara">#0DAAA4</color>
+    <color name="colorKeyLimePie">#C4CB22</color>
+    <color name="colorMediumPurple">#AE47E4</color>
+    <color name="colorProductDimGray">#707070</color>
+    <color name="colorDarkGray">#6B000000</color>
+    <color name="colorDeepCove">#050631</color>
+    <color name="allAltoColor">#DEDEDE</color>
+    <color name="colorDCodGray">#141414</color>
+    <color name="colorProductNeroTitle">#141414</color>
+    <color name="colorProductGallerysolid">#EFEFEF</color>
+    <color name="colorCorn">#E5B103</color>
+    <color name="colorRed">#FF1D1D</color>
+    <color name="colorWistful">#A1A8D6</color>
+    <color name="colorAlto">#D8D8D8</color>
+    <color name="shadow_color">#EBEBEB</color>
+
+</resources>

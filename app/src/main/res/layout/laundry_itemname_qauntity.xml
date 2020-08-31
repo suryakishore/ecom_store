@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/fiveDp"
+        android:paddingBottom="@dimen/fiveDp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/items"
+            android:textColor="@color/portGore"
+            android:textSize="@dimen/twelveSp" />
+
+        <EditText
+            android:id="@+id/et_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginLeft="@dimen/twentyDp"
+            android:layout_weight="0.7"
+            android:background="@null"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/roboto_bold"
+            android:inputType="number"
+            android:text="@string/quantity"
+            android:textColor="@color/portGore"
+            android:textSize="@dimen/twelveSp" />
+
+        <ImageView
+            android:id="@+id/iv_cross"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.3"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/delete_laundry_item" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.3"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/add_laundry_item"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

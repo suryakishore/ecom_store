@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginLeft="@dimen/twentyDp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+        </LinearLayout>
+            <AutoCompleteTextView
+                android:theme="@style/Autocomplete"
+                android:layout_weight="3"
+                android:textColorHint="@color/white"
+                android:hint="Sub Category"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:id="@+id/tv_subCat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <AutoCompleteTextView
+            android:theme="@style/Autocomplete"
+            android:layout_weight="3"
+            android:textColorHint="@color/white"
+            android:hint="Sub Category"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includeActionBar"
+        layout="@layout/layout_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clWithDraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dpFive"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/includeActionBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rlWithDraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/withDrawBackground"
+            android:paddingBottom="@dimen/dpFifteen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivWithDraw"
+                android:layout_width="@dimen/dpSixty"
+                android:layout_height="@dimen/dpSixty"
+                android:layout_marginStart="@dimen/dpThirty"
+                android:layout_marginTop="@dimen/dpSixteen"
+                android:layout_marginBottom="@dimen/dpFifteen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_with_draw" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWithDraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpFifteen"
+                android:layout_marginTop="@dimen/dpSixteen"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="@string/withDrawMethods"
+                android:textAlignment="center"
+                android:textColor="@color/noTrans"
+                android:textSize="@dimen/spNineteen"
+                app:layout_constraintStart_toEndOf="@+id/ivWithDraw"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpTwenty"
+                android:layout_marginTop="@dimen/dpFive"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="@string/selectPaymentMethod"
+                android:textAlignment="viewStart"
+                android:textColor="@color/walletSelectWithDrawMethod"
+                android:textSize="@dimen/spFourteen"
+                app:layout_constraintStart_toEndOf="@+id/ivWithDraw"
+                app:layout_constraintTop_toBottomOf="@+id/tvWithDraw" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPaypal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwenty"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dpThirty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlWithDraw"
+            app:srcCompat="@drawable/ic_paypal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPaypalPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpFiftySeven"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dpThirty"
+            android:layout_marginEnd="@dimen/dpTwenty"
+            android:drawableTint="@color/noTransMessage"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/paypal"
+            android:textColor="@color/allBlack"
+            android:textSize="@dimen/spSixteen"
+            app:drawableEndCompat="@drawable/ic_blue_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlWithDraw" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpTwenty"
+            android:layout_marginTop="@dimen/dpThirtyFour"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPaypal"
+            app:srcCompat="@drawable/ic_bank" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBankPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpFiftySeven"
+            android:layout_marginTop="@dimen/dpThirtySeven"
+            android:layout_marginEnd="@dimen/dpTwenty"
+            android:drawableTint="@color/noTransMessage"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/paymentBankAccount"
+            android:textColor="@color/allBlack"
+            android:textSize="@dimen/spSixteen"
+            app:drawableEndCompat="@drawable/ic_blue_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPaypalPayment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpSixty"
+        android:layout_marginStart="@dimen/dpTwentyTwo"
+        android:layout_marginEnd="@dimen/dpTwentyTwo"
+        android:layout_marginBottom="@dimen/dpTwenty"
+        android:background="@drawable/drawable_save_ripple"
+        android:fontFamily="@font/montserrat_bold"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/confirmButton"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spEighteen"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:layout_marginEnd="@dimen/dpFifteen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWalletAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpFortyOne"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textColor="@color/walletAmount"
+            android:textSize="@dimen/twentyFiveSp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWithDrawWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpFortySeven"
+            android:background="@drawable/drawable_withdraw_background"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="@string/withdraw"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/spTwelve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpOnePointFive"
+            android:layout_marginTop="@dimen/dpTwentyFive"
+            android:background="@color/viewBorder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWalletAmount" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRecentTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpSixteen"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="start"
+            android:text="@string/recentTransactions"
+            android:textAlignment="viewStart"
+            android:textColor="@color/walletRecentTrans"
+            android:textSize="@dimen/spFourteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTransDropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpSixteen"
+            android:layout_marginEnd="@dimen/dpTwentyFive"
+            android:drawablePadding="@dimen/dpFive"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="end"
+            android:onClick="onClick"
+            android:text="@string/allTransactions"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/transactions"
+            android:textSize="@dimen/spFourteen"
+            app:drawableEndCompat="@drawable/ic_drop_dwon_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTransactions"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpZero"
+            android:layout_marginTop="@dimen/dpFifteen"
+            android:layout_marginBottom="@dimen/dpFifteen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecentTrans" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNoTrans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_no_trans" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoTrans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivNoTrans"
+        android:layout_marginTop="@dimen/dpFifity"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/noTrans"
+        android:textAlignment="center"
+        android:textColor="@color/noTrans"
+        android:textSize="@dimen/spNineteen"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivNoTrans" />
+
+    <ProgressBar
+        android:id="@+id/pbWallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

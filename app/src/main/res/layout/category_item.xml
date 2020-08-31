@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:id="@+id/mainContent_Ll"
+      android:background="@color/white"
+      android:layout_marginTop="1dp"
+      android:layout_marginBottom="1dp"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+      <RelativeLayout
+          android:layout_width="110dp"
+          android:layout_height="110dp"
+          android:id="@+id/profile_image_Rl"
+          android:layout_centerVertical="true"
+          >
+
+        <ImageView
+            android:scaleType="centerInside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_default_icon"
+            android:layout_centerInParent="true"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            />
+
+      </RelativeLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_toRightOf="@id/profile_image_Rl"
+          android:layout_toEndOf="@id/profile_image_Rl"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="5dp"
+          android:layout_marginLeft="5dp"
+          >
+
+
+        <TextView
+            android:fontFamily="@font/roboto_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drinks"
+            android:textSize="14sp"
+            android:textColor="@color/colorPortGore"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:fontFamily="@font/robotoregular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is sample Description"
+            android:textSize="@dimen/thirteen_sp"
+            android:textColor="@color/colorOsloGray"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp"
+            />
+
+      </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightWhite"
+        android:visibility="visible"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+  </LinearLayout>
+</LinearLayout>

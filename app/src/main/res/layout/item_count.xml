@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/clItemCountContainer"
+
+      android:background="@color/grayShade"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/viewItemCountTop"
+        android:layout_width="@dimen/zeroDp"
+        android:layout_height="@dimen/oneDp"
+        android:background="@color/blackShade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewItemCountBottom"
+        android:layout_width="@dimen/zeroDp"
+        android:layout_height="@dimen/oneDp"
+        android:background="@color/blackShade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/viewItemCountRight"
+        android:layout_width="@dimen/oneDp"
+        android:layout_height="@dimen/zeroDp"
+        android:background="@color/blackShade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewItemCountLeft"
+        android:layout_width="@dimen/oneDp"
+        android:layout_height="@dimen/zeroDp"
+        android:background="@color/blackShade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItemCountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tenDp"
+        android:layout_marginTop="@dimen/fiveDp"
+        android:layout_marginEnd="@dimen/tenDp"
+        android:layout_marginBottom="@dimen/fiveDp"
+        android:padding="@dimen/tenDp"
+        android:includeFontPadding="false"
+        style="@style/Text.20sp.BlueZodiac.MontserratRegular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?selectableItemBackground">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="@dimen/zeroDp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:layout_marginTop="@dimen/dpFifteen"
+        android:layout_marginEnd="@dimen/fifty_dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:fontFamily="@font/montserrat_regular"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blackShade"
+        android:textSize="@dimen/spSixteen"
+        app:layout_constraintEnd_toStartOf="@+id/rbSingleOperator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/rbSingleOperator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="English" />
+
+    <RadioButton
+        android:id="@+id/rbSingleOperator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpThirteen"
+        android:layout_marginEnd="@dimen/twentyDp"
+        android:layout_marginRight="@dimen/twentyDp"
+        android:background="?selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLanguage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvLanguage" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpOne"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:layout_marginTop="@dimen/dpFifteen"
+        android:layout_marginEnd="@dimen/dpTwenty"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLanguage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

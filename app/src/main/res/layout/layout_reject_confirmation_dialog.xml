@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="@dimen/zeroDp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDialogTitle"
+                style="@style/Text.13sp.BlackShade.MontserratMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/twentyFiveDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:text="@string/reject_confirmation_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/tvOptionsReject"
+                style="@style/Text.16sp.BlackShade.MontserratBold"
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/thirtyDp"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_marginBottom="@dimen/twentyDp"
+                android:background="@drawable/white_border"
+                android:paddingTop="@dimen/fifteenDp"
+                android:paddingBottom="@dimen/fifteenDp"
+                android:text="@string/rejectOrder"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDialogTitle" />
+
+            <TextView
+                android:id="@+id/tvOptionsCancel"
+                style="@style/Text.16sp.White.MontserratBold"
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:layout_marginTop="@dimen/thirtyDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:layout_marginBottom="@dimen/twentyDp"
+                android:background="@drawable/app_color_border"
+                android:paddingTop="@dimen/fifteenDp"
+                android:paddingBottom="@dimen/fifteenDp"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvDialogTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

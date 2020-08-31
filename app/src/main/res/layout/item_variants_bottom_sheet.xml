@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAttributeName"
+            style="@style/Text.16sp.Nero.PoppinsMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="variant" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAttributeValue"
+            style="@style/Text.16sp.Nero.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fiveDp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toEndOf="@+id/tvAttributeName"
+            app:layout_constraintTop_toTopOf="@+id/tvAttributeName"
+            tools:text="Mango" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVariants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginTop="@dimen/dpThree"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAttributeName"
+           />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

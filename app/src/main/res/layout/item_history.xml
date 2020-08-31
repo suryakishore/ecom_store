@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:layout_marginTop="@dimen/dpFifteen"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textAlignment="viewStart"
+        android:textColor="@color/historyOrderId"
+        android:textSize="@dimen/fourteenSp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="S Order: GRODEL123SBN387N" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOrderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:fontFamily="@font/montserrat_regular"
+        android:textAlignment="viewStart"
+        android:textColor="@color/historyOrderId"
+        android:textSize="@dimen/spFourteen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOrderId"
+        tools:text="Placed on : 10:00 am, Jan 10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOrderAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dpTwenty"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textAlignment="viewStart"
+        android:textColor="@color/historyOrderId"
+        android:textSize="@dimen/fourteenSp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOrderTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvOrderId"
+        tools:text="$ 345.00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:layout_marginTop="@dimen/dpTwentyOne"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textAlignment="viewStart"
+        android:textColor="@color/historyOrderId"
+        android:textSize="@dimen/spFourteen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOrderTime"
+        tools:text="Sam Alexander" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNumberOfProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpFifteen"
+        android:fontFamily="@font/montserrat_regular"
+        android:textAlignment="viewStart"
+        android:textColor="@color/historyOrderId"
+        android:textSize="@dimen/spFourteen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCustomerName"
+        tools:text="4 Products" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpSeventyThree"
+        android:layout_marginEnd="@dimen/dpTwenty"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textAlignment="viewStart"
+        android:textColor="@color/historyOrderStatus"
+        android:textSize="@dimen/spSixteen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Delivered" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDeliveryTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dpTwenty"
+        android:fontFamily="@font/montserrat_regular"
+        android:textAlignment="viewStart"
+        android:textColor="@color/historyOrderId"
+        android:textSize="@dimen/spFourteen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOrderStatus"
+        tools:text="10:00 am, Jan 10" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpTwelve"
+        android:layout_marginTop="@dimen/dpFifteen"
+        android:background="@color/historyBackGround"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeliveryTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>

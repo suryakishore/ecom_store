@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.ecomstore.boarding.verifyotp.EcomVerifyOtpViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="@{() -> viewModel.onBackClicked()}"
+            android:paddingTop="@dimen/tenDp"
+            android:paddingBottom="@dimen/tenDp"
+            android:src="@drawable/ic_back_btn"
+            android:tint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTabBarTitle"
+            style="@style/Text.18sp.BlackShade.MontserratBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/tenDp"
+            android:background="@drawable/shadow_top_layout"
+            app:layout_constraintTop_toBottomOf="@+id/ivBack">
+
+        </View>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clVerifyOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEnterCode"
+                style="@style/Text.18sp.BlackShade.MontserratSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentyDp"
+                android:layout_marginLeft="@dimen/twentyDp"
+                android:layout_marginTop="@dimen/fifteenDp"
+                android:layout_marginEnd="@dimen/twentyDp"
+                android:layout_marginRight="@dimen/twentyDp"
+                android:text="@string/enterVerificationCode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOtpDescText"
+                style="@style/Text.14sp.BlueSmoke.MontserratMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentyDp"
+                android:layout_marginLeft="@dimen/twentyDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/twentyDp"
+                android:layout_marginRight="@dimen/twentyDp"
+                android:text="@string/otpDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEnterCode" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvResetPassCodeTxt"
+                style="@style/Text.14sp.Gray.MontserratRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentyDp"
+                android:layout_marginTop="@dimen/fourteenSp"
+                android:text="@string/receiveCode"
+                app:layout_constraintEnd_toStartOf="@+id/tvResetPassResend"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etResetPassSec" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvResetPassResend"
+                style="@style/Text.14sp.Primary.MontserratSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fiveDp"
+                android:layout_marginTop="@dimen/fourteenSp"
+                android:onClick="@{() -> viewModel.onTextResendClicked()}"
+                android:text="@string/resend"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvResetPassCodeTxt"
+                app:layout_constraintTop_toBottomOf="@+id/etResetPassSec" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etResetPassSec"
+                style="@style/Text.25sp.BlackShade.MontserratSemiBold"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/thirtyDp"
+                android:layout_marginEnd="@dimen/fiveDp"
+                android:background="@drawable/rectangle_corner_bank_acc_gunsmoke"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:onTextChanged="@{viewModel::onTextChangeOtpSec}"
+                android:paddingTop="@dimen/sevenDp"
+                android:paddingBottom="@dimen/sevenDp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvOtpDescText" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etResetPassFir"
+                style="@style/Text.25sp.BlackShade.MontserratSemiBold"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:background="@drawable/rectangle_corner_bank_acc_gunsmoke"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:onTextChanged="@{viewModel::onTextChangeOtpFir}"
+                android:paddingTop="@dimen/sevenDp"
+                android:paddingBottom="@dimen/sevenDp"
+                app:layout_constraintRight_toLeftOf="@+id/etResetPassSec"
+                app:layout_constraintTop_toTopOf="@+id/etResetPassSec" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etResetPassThi"
+                style="@style/Text.25sp.BlackShade.MontserratSemiBold"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fiveDp"
+                android:background="@drawable/rectangle_corner_bank_acc_gunsmoke"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:onTextChanged="@{viewModel::onTextChangeOtpThi}"
+                android:paddingTop="@dimen/sevenDp"
+                android:paddingBottom="@dimen/sevenDp"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/etResetPassSec" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etResetPassFour"
+                style="@style/Text.25sp.BlackShade.MontserratSemiBold"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tenDp"
+                android:background="@drawable/rectangle_corner_bank_acc_gunsmoke"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:onTextChanged="@{viewModel::onTextChangeOtpFour}"
+                android:paddingTop="@dimen/sevenDp"
+                android:paddingBottom="@dimen/sevenDp"
+                app:layout_constraintLeft_toRightOf="@+id/etResetPassThi"
+                app:layout_constraintTop_toTopOf="@+id/etResetPassSec" />
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/vgOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="etResetPassFir,etResetPassSec,etResetPassThi,etResetPassFour,tvResetPassCodeTxt,tvResetPassResend" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiForGotEmail"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/thirtyDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:ErrorMessage="@{viewModel.errorMailMsg}"
+                android:hint="@string/userName"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOtpDescText">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etForGotEmail"
+                    style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:inputType="textEmailAddress"
+                    android:onTextChanged="@{viewModel::onUserEmailChanged}"
+                    android:padding="@dimen/twentyDp"
+                    android:theme="@style/EditText.Theme" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zeroDp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/success_tick"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="@dimen/thirtyDp"
+                app:layout_constraintBottom_toTopOf="@+id/btDone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/animated_check" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSucDesc"
+                style="@style/Text.14sp.BlueSmoke.MontserratMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/thirtyDp"
+                android:layout_marginLeft="@dimen/thirtyDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/thirtyDp"
+                android:layout_marginRight="@dimen/thirtyDp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/success_tick" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btDone"
+                style="@style/Text.16sp.White.MontserratBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twentyDp"
+                android:layout_marginTop="@dimen/twentyDp"
+                android:layout_marginEnd="@dimen/twentyDp"
+                android:layout_marginBottom="@dimen/twentyDp"
+                android:background="@drawable/ripple_selector"
+                android:gravity="center"
+                android:onClick="@{() -> viewModel.onDoneButtonClicked()}"
+                android:padding="@dimen/tenDp"
+                android:text="@string/done"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ProgressBar
+            android:id="@+id/pbLoginShowProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/red"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btLoginVerify"
+            style="@style/Text.16sp.White.MontserratBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDp"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:layout_marginEnd="@dimen/twentyDp"
+            android:layout_marginBottom="@dimen/tenDp"
+            android:background="@drawable/ripple_selector"
+            android:btnEnabled="@{viewModel.btnEnabled}"
+            android:gravity="center"
+            android:onClick="@{() -> viewModel.onVerifyButtonClicked()}"
+            android:padding="@dimen/tenDp"
+            android:text="@string/verify"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

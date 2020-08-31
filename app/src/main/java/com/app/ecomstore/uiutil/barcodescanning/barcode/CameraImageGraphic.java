@@ -1,0 +1,21 @@
+package com.app.ecomstore.uiutil.barcodescanning.barcode;
+
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+import com.app.ecomstore.uiutil.barcodescanning.graphic.GraphicOverlay;
+
+public class CameraImageGraphic extends GraphicOverlay.Graphic {
+
+  private final Bitmap bitmap;
+
+  public CameraImageGraphic(GraphicOverlay overlay, Bitmap bitmap) {
+    super(overlay);
+    this.bitmap = bitmap;
+  }
+
+  @Override
+  public void draw(Canvas canvas) {
+    canvas.drawBitmap(bitmap, null, new Rect(0, 0, canvas.getWidth(), canvas.getHeight()), null);
+  }
+}

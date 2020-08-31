@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?><!--<android.support.constraint.ConstraintLayout-->
+
+<!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:visibility="visible"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <ImageView
+            android:id="@+id/ivAddPhotos"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@drawable/eye"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4.0"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="start"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/twoDp"
+                android:fontFamily="@font/robotoregular"
+                android:text=""
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/twelveSp" />
+
+        </LinearLayout>
+        <!--android:text="cookies and Creame mind tricks"-->
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:enabled="false"
+                android:fontFamily="@font/robotoregular"
+                android:inputType="number"
+                android:padding="@dimen/fiveDp"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+            <!-- android:text="15"-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/fiveDp"
+                android:layout_marginLeft="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/fiveDp"
+                android:layout_marginRight="@dimen/fiveDp"
+                android:fontFamily="@font/robotoregular"
+                android:padding="@dimen/fiveDp"
+                android:text="X"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+
+            <TextView
+                android:id="@+id/tvCurrencySymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/fiveDp"
+                android:layout_marginLeft="@dimen/fiveDp"
+                android:fontFamily="@font/robotoregular"
+                android:paddingStart="@dimen/fiveDp"
+                android:paddingLeft="@dimen/fiveDp"
+                android:paddingTop="@dimen/fiveDp"
+                android:paddingEnd="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="@dimen/fiveDp"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+
+            <EditText
+                android:id="@+id/etUnitPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:enabled="false"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:paddingTop="@dimen/fiveDp"
+                android:paddingBottom="@dimen/fiveDp"
+                android:textColor="@color/shark"
+                android:textSize="@dimen/sixteenSp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvOrderListTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="-5dp"
+            android:layout_weight="3"
+            android:text=""
+            android:fontFamily="@font/robotoregular"
+            android:gravity="end"
+            android:paddingTop="@dimen/fiveDp"
+            android:textColor="@color/shark"
+            android:textSize="@dimen/sixteenSp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/llAddonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAddOnsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:paddingTop="@dimen/tenDp"
+        android:paddingBottom="@dimen/tenDp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
+
+    <!--</android.support.constraint.ConstraintLayout>-->

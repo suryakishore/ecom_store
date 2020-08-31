@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbSingleOperator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpTwentyThree"
+        android:layout_marginTop="@dimen/dpTen"
+        android:buttonTint="@color/addCardBorder"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpSeventy"
+        android:layout_marginTop="@dimen/dpTen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_bank" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpOneThirty"
+        android:layout_marginTop="@dimen/dpTen"
+        android:fontFamily="@font/montserrat_regular"
+        android:textAlignment="viewStart"
+        android:textColor="@color/walletAmount"
+        android:textSize="@dimen/spSixteen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="45xx xx 1425" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBankCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpOneThirty"
+        android:fontFamily="@font/montserrat_regular"
+        android:textAlignment="viewStart"
+        android:textColor="@color/bankCode"
+        android:textSize="@dimen/spFourteen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountNumber"
+        tools:text="Bank Code : SBIN00124" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginEnd="@dimen/dpTwenty"
+        android:tint="@color/noTransMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_blue_right" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

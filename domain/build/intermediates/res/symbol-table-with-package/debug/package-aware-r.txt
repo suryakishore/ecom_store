@@ -1,0 +1,2 @@
+com.ecomstore.domain
+string app_name

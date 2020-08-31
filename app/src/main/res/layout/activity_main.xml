@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/appBarLayout"
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:theme="@style/styleDrawer"
+            app:elevation="@dimen/zeroDp"
+            app:headerLayout="@layout/nav_header_main"
+            app:itemIconPadding="@dimen/fifteenDp"
+            app:itemIconTint="@color/tandura"
+            app:itemTextColor="@color/tandura"
+            app:menu="@menu/activity_main_drawer">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="@dimen/dpSixteen"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/border"
+                android:textSize="@dimen/spEleven" />
+        </com.google.android.material.navigation.NavigationView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navFilter"
+            android:layout_width="@dimen/dpTwoFifty"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            app:elevation="@dimen/zeroDp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/view_header"
+                    layout="@layout/filter_header" />
+
+                <include
+                    android:id="@+id/view_filter"
+                    layout="@layout/filter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_header" />
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

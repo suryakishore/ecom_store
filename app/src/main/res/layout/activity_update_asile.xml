@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.ecomstore.updateasile.UpdateAsileActivity">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.ecomstore.updateasile.UpdateAisleViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/zeroDp"
+            app:cardElevation="@dimen/fiveDp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_toolbar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zeroDp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/clUpdateAisle"
+            app:layout_constraintTop_toBottomOf="@+id/cvToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:id="@+id/itemPharmacyRow"
+                    layout="@layout/item_pharmacy_single_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvAisle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twentyDp"
+                    android:layout_marginLeft="@dimen/twentyDp"
+                    android:layout_marginTop="@dimen/thirtyDp"
+                    android:layout_marginEnd="@dimen/twentyDp"
+                    android:layout_marginRight="@dimen/twentyDp"
+                    app:cardCornerRadius="@dimen/zeroDp"
+                    app:cardElevation="@dimen/fiveDp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/itemPharmacyRow">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/tenDp"
+                        android:paddingBottom="@dimen/tenDp"
+                        app:layout_constraintTop_toBottomOf="@+id/itemPharmacyRow">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvItemAsile"
+                            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/twentyDp"
+                            android:text="@string/aisle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tvItemAsileCount"
+                            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/twentyDp"
+                            android:layout_marginTop="@dimen/tenDp"
+                            android:layout_marginEnd="@dimen/twentyDp"
+                            android:hint="@string/enterAisle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvItemAsile" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvShelf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twentyDp"
+                    android:layout_marginLeft="@dimen/twentyDp"
+                    android:layout_marginTop="@dimen/thirtyDp"
+                    android:layout_marginEnd="@dimen/twentyDp"
+                    android:layout_marginRight="@dimen/twentyDp"
+                    app:cardCornerRadius="@dimen/zeroDp"
+                    app:cardElevation="@dimen/fiveDp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvAisle">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/tenDp"
+                        android:paddingBottom="@dimen/tenDp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvItemShelf"
+                            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/twentyDp"
+                            android:text="@string/shelf"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tvItemShelfCount"
+                            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/twentyDp"
+                            android:layout_marginTop="@dimen/tenDp"
+                            android:layout_marginEnd="@dimen/twentyDp"
+                            android:hint="@string/enterShelf"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvItemShelf" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twentyDp"
+                    android:layout_marginLeft="@dimen/twentyDp"
+                    android:layout_marginTop="@dimen/thirtyDp"
+                    android:layout_marginEnd="@dimen/twentyDp"
+                    android:layout_marginRight="@dimen/twentyDp"
+                    app:cardCornerRadius="@dimen/zeroDp"
+                    app:cardElevation="@dimen/fiveDp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvShelf">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/tenDp"
+                        android:paddingBottom="@dimen/tenDp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvItemSection"
+                            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/twentyDp"
+                            android:text="@string/section"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvItemSectionCount"
+                            style="@style/Text.14sp.BlueZodiac.MontserratMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/twentyDp"
+                            android:layout_marginTop="@dimen/tenDp"
+                            android:text="@string/near"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvItemSection" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivItemSection"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="@dimen/fifteenDp"
+                            android:contentDescription="@string/nav_header_desc"
+                            android:tint="@color/allBlack"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvItemSectionCount"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvItemSectionCount"
+                            app:srcCompat="@drawable/ic_arrow_drop_down" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clUpdateAisle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/layoutButton"
+                layout="@layout/layout_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llItemDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Text.13sp.Shark.MontserratBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/tenDp"
+                    android:gravity="start"
+                    android:padding="@dimen/fiveDp"
+                    android:text="@string/item"
+                    android:textAllCaps="true" />
+
+                <ImageView
+                    android:id="@+id/ivOrderDetailsEdit"
+                    android:layout_width="@dimen/thirtyDp"
+                    android:layout_height="@dimen/twentyDp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/edit"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvOrderDetailsPrice"
+                style="@style/Text.13sp.Shark.MontserratBold"
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/tenDp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="@dimen/fiveDp"
+                android:text="@string/price"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tbPharmacyOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteenDp"
+            android:layout_marginLeft="@dimen/fifteenDp"
+            android:visibility="gone"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorHeight="@dimen/twoDp"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="@dimen/fifteenDp"
+            app:tabSelectedTextColor="@color/colorPrimary">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tbItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/items" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tbPrescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prescription" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tbRejected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rejected" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <ScrollView
+            android:id="@+id/svItemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llOrderDetailsItemContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fiveDp"
+                android:layout_marginTop="@dimen/dpFive"
+                android:layout_marginEnd="@dimen/fiveDp"
+                android:orientation="vertical"
+                />
+
+        </ScrollView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPrescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fiveDp"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNoOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/twentyDp"
+            android:src="@drawable/ic_empty_orders"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/llPaymentBreakDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tenDp"
+                android:layout_marginTop="@dimen/fifteenDp"
+                android:background="@color/whiteLight" />
+
+            <TextView
+                style="@style/Text.16sp.Shark.MontserratSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:text="@string/orderDetails_paymentBreakdown" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:weightSum="2.5">
+
+                    <TextView
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:layout_weight="1.8"
+                        android:gravity="start"
+                        android:text="@string/subTotal"
+                        android:textAlignment="viewStart"
+                        tools:ignore="UnusedAttribute" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailsSubTotalValue"
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:textAlignment="viewEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrderDetailsDeliveryCharges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:visibility="gone"
+                    android:weightSum="2.5">
+
+                    <TextView
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:layout_weight="1.8"
+                        android:gravity="start"
+                        android:text="@string/deliveryCharge"
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailsDeliveryCharge"
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:textAlignment="viewEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:weightSum="2.5">
+
+                    <TextView
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:layout_weight="1.8"
+                        android:gravity="start"
+                        android:text="@string/discount"
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailsDiscountValue"
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:textAlignment="viewEnd" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llPromoDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:visibility="gone"
+                    android:weightSum="2.5">
+
+                    <TextView
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:layout_weight="1.8"
+                        android:gravity="start"
+                        android:text="@string/promoDiscount"
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:id="@+id/tvPromoDiscountValue"
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:textAlignment="viewEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrderDetailsServiceCharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:visibility="gone"
+                    android:weightSum="2.5">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailsServiceChargeTxt"
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="@dimen/zeroDp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:layout_weight="1.8"
+                        android:gravity="start"
+                        android:text="@string/serviceCharge"
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailsServiceCharge"
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:textAlignment="viewEnd" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailsTaxes"
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/tax"
+                        android:textAlignment="viewStart"
+                        android:visibility="visible" />
+
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailsTaxesTotal"
+                        style="@style/Text.14sp.Shark.MontserratRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/tenDp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrderDetailsTaxesDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:textAlignment="viewStart"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/llOrderDetailsTaxesDetailsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twoDp"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:background="@drawable/dash_line" />
+
+            <RelativeLayout
+                android:id="@+id/rlOrderDetailsTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/Text.14sp.Shark.MontserratBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/total" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    tools:ignore="RelativeOverlap">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailsTotalValue"
+                        style="@style/Text.14sp.Shark.MontserratBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twoDp"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:background="@drawable/dash_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteenDp"
+                android:layout_marginTop="@dimen/tenDp"
+                android:layout_marginEnd="@dimen/fifteenDp"
+                android:layout_marginBottom="@dimen/tenDp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Text.14sp.Shark.MontserratRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_weight="1.8"
+                    android:gravity="start"
+                    android:text="@string/paymentMethod"
+                    android:textAlignment="viewStart" />
+
+                <TextView
+                    android:id="@+id/tvOrderDetailsPaymentType"
+                    style="@style/Text.13sp.Shark.MontserratSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fiveDp"
+                    android:layout_marginEnd="@dimen/tenDp"
+                    android:layout_weight="1.8"
+                    android:gravity="start"
+                    android:textAlignment="viewStart"
+                    tools:text="COD" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

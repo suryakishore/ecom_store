@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/twoHundred_dp"
+                android:paddingStart="@dimen/twoHundred_dp"
+                android:paddingEnd="@dimen/twoHundred_dp"
+                android:paddingRight="@dimen/twoHundred_dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_login_logo"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/nav_header_desc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    style="@style/Text.18sp.BlackShade.MontserratBold"
+                    android:text="@string/forgot_password"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvEmailText"
+                        style="@style/Text.16sp.Primary.MontserratRegular"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:text="@string/email_address" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvOrText"
+                        android:layout_marginLeft="@dimen/tenDp"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:layout_marginRight="@dimen/tenDp"
+                        android:layout_marginEnd="@dimen/tenDp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/or"
+                        style="@style/Text.18sp.Gray.MontserratRegular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvPhnNumText"
+                        android:textSize="@dimen/twentySp"
+                        style="@style/Text.16sp.BlackShade.MontserratRegular"
+                        android:layout_marginStart="@dimen/tenDp"
+                        android:text="@string/phone_number"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    app:hintTextAppearance="@style/styleHint"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/userName"
+                    android:layout_marginTop="@dimen/twentyDp">
+
+                    <EditText
+                        android:gravity="center"
+                        android:id="@+id/etEmailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:cursorVisible="true"
+                        android:fontFamily="@font/robotoregular"
+                        android:textSize="@dimen/eighteenSp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/thirtyDp"
+                    android:background="@drawable/rectangle_solid_green_corner"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/twentyDp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="@dimen/twentySp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

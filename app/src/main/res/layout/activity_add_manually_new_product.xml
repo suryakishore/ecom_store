@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.ecomstore.forceaddproduct.AddManuallyNewProductActivity">
+
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.ecomstore.forceaddproduct.AddManuallyProductViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/zeroDp"
+            app:cardElevation="@dimen/fiveDp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/layoutToolBar"
+                layout="@layout/layout_toolbar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zeroDp"
+            app:layout_constraintBottom_toTopOf="@+id/clConfirm"
+            app:layout_constraintTop_toBottomOf="@+id/cvToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvImage"
+                    android:layout_width="@dimen/dpSeventy"
+                    android:layout_height="@dimen/dpSeventy"
+                    android:layout_marginStart="@dimen/twentyDp"
+                    android:layout_marginLeft="@dimen/twentyDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_login_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiItemName"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:ErrorMessage="@{viewmodel.errorItemName}"
+                    android:hint="@string/itemName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvImage">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etName"
+                        style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:inputType="text"
+                        android:onTextChanged="@{viewmodel::onNameChanged}"
+                        android:padding="@dimen/twentyDp"
+                        android:theme="@style/EditText.Theme" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHowIsTheItem"
+                    style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:text="@string/howIsTheItemSold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiItemName" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPerKg"
+                    style="@style/Text.14sp.Primary.MontserratMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:background="@drawable/rectangle_corner_bank_green"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/tenDp"
+                    android:paddingBottom="@dimen/tenDp"
+                    android:text="@string/perKg"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHowIsTheItem" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPerUnit"
+                    style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                    android:layout_width="@dimen/zeroDp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:background="@drawable/rectangle_corner_bank_acc_gunsmoke"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/tenDp"
+                    android:paddingBottom="@dimen/tenDp"
+                    android:text="@string/perUnit"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHowIsTheItem" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPerKg">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiWeight"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fifteenDp"
+                        android:layout_marginTop="@dimen/twentyDp"
+                        android:layout_marginEnd="@dimen/fifteenDp"
+                        android:ErrorMessage="@{viewmodel.errorQty}"
+                        android:hint="@string/totalWeight"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etWeight"
+                            style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:inputType="numberDecimal"
+                            android:onTextChanged="@{viewmodel::onQtyChanged}"
+                            android:padding="@dimen/twentyDp"
+                            android:theme="@style/EditText.Theme" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiQty"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fifteenDp"
+                        android:layout_marginTop="@dimen/twentyDp"
+                        android:layout_marginEnd="@dimen/fifteenDp"
+                        android:ErrorMessage="@{viewmodel.errorQty}"
+                        android:hint="@string/qtyManditory"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etQty"
+                            style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:inputType="numberDecimal"
+                            android:onTextChanged="@{viewmodel::onQtyChanged}"
+                            android:padding="@dimen/twentyDp"
+                            android:theme="@style/EditText.Theme" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiPricePerProduct"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:ErrorMessage="@{viewmodel.errorPriceUnit}"
+                    android:hint="@string/priceManditory"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clQuantity">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPricePerProduct"
+                        style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:inputType="numberDecimal"
+                        android:onTextChanged="@{viewmodel::onPricePerProductChanged}"
+                        android:padding="@dimen/twentyDp"
+                        android:theme="@style/EditText.Theme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiTotalCharge"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteenDp"
+                    android:layout_marginTop="@dimen/twentyDp"
+                    android:layout_marginEnd="@dimen/fifteenDp"
+                    android:ErrorMessage="@{viewmodel.errorTotalCharge}"
+                    android:hint="@string/totalChargedToCustomer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiPricePerProduct">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etTotalCharge"
+                        style="@style/Text.15sp.BlueZodiac.MontserratMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:inputType="numberDecimal"
+                        android:onTextChanged="@{viewmodel::onTotalChargeToCustomerChanged}"
+                        android:padding="@dimen/twentyDp"
+                        android:theme="@style/EditText.Theme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clConfirm"
+            android:layout_width="@dimen/zeroDp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/layoutButton"
+                layout="@layout/layout_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="@{viewmodel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
